@@ -11,20 +11,94 @@
         <w2:MSA/>
         <xf:model>
         	<w2:dataCollection baseNode="map">
+        		<w2:dataList baseNode="list" repeatNode="map" id="dc_code" saveRemovedData="true">
+        			<w2:columnInfo>
+        				<w2:column id="CODE_CD" name="코드값" dataType="text"></w2:column>
+        				<w2:column id="CODE_NM" name="코드명" dataType="text"></w2:column>
+        			</w2:columnInfo>
+        			<w2:data use="true">
+        				<w2:row>
+        					<CODE_CD><![CDATA[01]]></CODE_CD>
+        					<CODE_NM><![CDATA[개발자]]></CODE_NM>
+        				</w2:row>
+        				<w2:row>
+        					<CODE_CD><![CDATA[02]]></CODE_CD>
+        					<CODE_NM><![CDATA[설계자]]></CODE_NM>
+        				</w2:row>
+        				<w2:row>
+        					<CODE_CD><![CDATA[03]]></CODE_CD>
+        					<CODE_NM><![CDATA[DBA]]></CODE_NM>
+        				</w2:row>
+        				<w2:row>
+        					<CODE_CD><![CDATA[04]]></CODE_CD>
+        					<CODE_NM><![CDATA[PL]]></CODE_NM>
+        				</w2:row>
+        				<w2:row>
+        					<CODE_CD><![CDATA[05]]></CODE_CD>
+        					<CODE_NM><![CDATA[PM]]></CODE_NM>
+        				</w2:row>
+        			</w2:data>
+        		</w2:dataList>
+        		<w2:dataMap baseNode="map" id="dc_reqUserInfo">
+        			<w2:keyInfo>
+        				<w2:key id="EMP_CD" name="사용자 코드" dataType="text"></w2:key>
+        			</w2:keyInfo>
+        		</w2:dataMap>
+        		<w2:dataMap baseNode="map" id="dc_userInfo">
+        			<w2:keyInfo>
+        				<w2:key id="EMP_CD" name="사번" dataType="text"></w2:key>
+        				
+        				<w2:key id="EMP_NM" name="성명" dataType="text"></w2:key>
+        				<w2:key id="GENDER_CD" name="성별" dataType="text"></w2:key>
+        				<w2:key id="JOIN_DATE" name="입사일" dataType="text"></w2:key>
+        				<w2:key id="POSITION_CD" name="직급" dataType="text"></w2:key>
+        				<w2:key id="DUTY_CD" name="직책" dataType="text"></w2:key>
+        				<w2:key id="ROLE_CD" name="역할" dataType="text"></w2:key>
+        				<w2:key id="ASSIGNED_TASK" name="담당 업무" dataType="text"></w2:key>
+        				<w2:key id="EMAIL" name="이메일" dataType="text"></w2:key>
+        				<w2:key id="ZIP_CD" name="우편번호" dataType="text"></w2:key>
+        				<w2:key id="ADDRESS1" name="주소1" dataType="text"></w2:key>
+        				<w2:key id="ADDRESS2" name="주소2" dataType="text"></w2:key>
+        				<w2:key id="CREATED_DATE" name="입력일" dataType="text"></w2:key>
+        				<w2:key id="UPDATED_DATE" name="수정일" dataType="text"></w2:key>
+        			</w2:keyInfo>
+        		</w2:dataMap>
         	</w2:dataCollection>
         	<w2:workflowCollection />
+        	<xf:submission id="sub_select" ref="data:json,dc_reqUserInfo" target="data:json,dc_userInfo" action="/edu/data/userInfo.json" method="post" mediatype="application/json" encoding="UTF-8"
+        		instance="" replace="" errorHandler="" customHandler="" mode="asynchronous" processMsg="조회중입니다."
+        		ev:submit="scwin.sub_select_submit" ev:submitdone="scwin.sub_select_submitdone" ev:submiterror="scwin.sub_select_submiterror"
+        		abortTrigger="">
+        	</xf:submission>
         </xf:model>
         <w2:layoutInfo/>
         <w2:publicInfo method=""/>
         <script lazy="false" type="text/javascript"><![CDATA[
 scwin.onpageload = function() { 
+    ui_join.setValue($p.getCurrentServerDate());
+    ui_gender.addItem("M", "남자");
+    ui_gender.addItem("F", "여자");
+};
  
+scwin.btn_select_onclick = function(e) {
+    $p.executeSubmission("sub_select");
+};
+
+scwin.sub_select_submit = function(e) {
 
 };
- ]]></script>
+
+scwin.sub_select_submitdone = function(e) {
+
+};
+
+scwin.sub_select_submiterror = function(e) {
+
+};
+]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
-    	<xf:group class="sub_contents" id="" style="">
+    	<xf:group class="sub_contents" id="onClick" style="" ev:onclick="scwin.onClick_onclick">
     		<xf:group class="pgtbox" id="" style="">
     			<xf:trigger class="btn_fav" id="" style="" type="button">
     				<xf:label></xf:label>
@@ -82,7 +156,7 @@ scwin.onpageload = function() {
     			</xf:group>
     			<xf:group class="btn_schbox" id="" style="">
     				<xf:trigger class="btn_cm sch" disabled="" escape="false" id="btn_select" style="" type="button"
-    					tooltip="데이터를 조회합니다.">
+    					tooltip="데이터를 조회합니다." ev:onclick="scwin.btn_select_onclick">
     					<xf:label><![CDATA[조회]]></xf:label>
     				</xf:trigger>
     			</xf:group>
@@ -106,15 +180,36 @@ scwin.onpageload = function() {
     						<w2:textbox class="" id="" label="이름" ref="" style="" userData2=""></w2:textbox>
     					</xf:group>
     					<xf:group class="w2tb_td" style="" tagname="td">
-    						<xf:input id="" initValue="" ref="" style="width: 144px;"></xf:input>
+    						<xf:input id="" initValue="" ref="data:dc_userInfo.EMP_NM" style="width: 144px;" placeholder="성명을 넣어주세요"></xf:input>
     					</xf:group>
     					<xf:group class="w2tb_th " tagname="th"><w2:attributes></w2:attributes><w2:textbox class="" id="" label="직급" ref="" style="" userData2=""></w2:textbox></xf:group>
     					<xf:group class="w2tb_td" tagname="td">
     						<w2:attributes></w2:attributes>
-    						<xf:select1 allOption="" appearance="minimal" chooseOption="" direction="auto" disabled="false"
-    							disabledClass="w2selectbox_disabled" displayMode="label" id="" optionOrder="false" ref="" selectedData="true"
-    							style="width: 148px;height: 21px;" submenuSize="auto">
-    							<xf:choices></xf:choices>
+    						<xf:select1 allOption="true" appearance="minimal" chooseOption="true" direction="auto" disabled="false"
+    							disabledClass="w2selectbox_disabled" displayMode="label" id="" optionOrder="false" ref="data:dc_userInfo.POSITION_CD" selectedData="true"
+    							style="width: 148px;height: 21px;" submenuSize="auto" chooseOptionLabel="직급을 넣으세요">
+    							<xf:choices>
+    								<xf:item>
+    									<xf:label><![CDATA[부장]]></xf:label>
+    									<xf:value><![CDATA[01]]></xf:value>
+    								</xf:item>
+    								<xf:item>
+    									<xf:label><![CDATA[차장]]></xf:label>
+    									<xf:value><![CDATA[02]]></xf:value>
+    								</xf:item>
+    								<xf:item>
+    									<xf:label><![CDATA[과장]]></xf:label>
+    									<xf:value><![CDATA[03]]></xf:value>
+    								</xf:item>
+    								<xf:item>
+    									<xf:label><![CDATA[대리]]></xf:label>
+    									<xf:value><![CDATA[04]]></xf:value>
+    								</xf:item>
+    								<xf:item>
+    									<xf:label><![CDATA[사원]]></xf:label>
+    									<xf:value><![CDATA[05]]></xf:value>
+    								</xf:item>
+    							</xf:choices>
     						</xf:select1>
     					</xf:group>
     				</xf:group>
@@ -127,7 +222,7 @@ scwin.onpageload = function() {
     					</xf:group>
     					<xf:group tagname="td" class="w2tb_td">
     						<w2:attributes></w2:attributes>
-    						<w2:inputCalendar calendarValueType="yearMonthDate" focusOnDateSelect="false" footerDiv="false" id="" ref=""
+    						<w2:inputCalendar calendarValueType="yearMonthDate" focusOnDateSelect="false" footerDiv="false" id="ui_join" ref="data:dc_userInfo.JOIN_DATE"
     							renderDiv="true" renderType="component" rightAlign="false" style="width: 150px;height: 24px;" weekStartsOn="0">
     						</w2:inputCalendar>
     					</xf:group>
@@ -139,7 +234,7 @@ scwin.onpageload = function() {
     					</xf:group>
     					<xf:group tagname="td" class="w2tb_td">
     						<w2:attributes></w2:attributes>
-    						<xf:select1 appearance="full" cols="" id="ui_gender" ref="" renderType="radiogroup" rows="" selectedIndex="-1"
+    						<xf:select1 appearance="full" cols="" id="ui_gender" ref="data:dc_userInfo.GENDER_CD" renderType="radiogroup" rows="" selectedIndex="-1"
     							style="min-width: 150px;min-height: 12px;">
     							<xf:choices></xf:choices>
     						</xf:select1>
@@ -155,7 +250,7 @@ scwin.onpageload = function() {
     							<w2:colspan>1</w2:colspan>
     							<w2:rowspan>1</w2:rowspan>
     						</w2:attributes>
-    						<xf:input id="" ref="" style="width: 100%;"></xf:input>
+    						<xf:input id="" ref="data:dc_userInfo.EMAIL" style="width: 100%;"></xf:input>
     					</xf:group>
     					<xf:group class="w2tb_th " tagname="th">
     						<w2:attributes></w2:attributes>
@@ -163,12 +258,12 @@ scwin.onpageload = function() {
     					</xf:group>
     					<xf:group class="w2tb_td" tagname="td">
     						<w2:attributes></w2:attributes>
-    						<xf:select appearance="full" cols="" id="" ref="" renderType="checkboxgroup" rows="" selectedindex="-1"
+    						<xf:select appearance="full" cols="" id="" ref="data:dc_userInfo.ROLE_CD" renderType="checkboxgroup" rows="" selectedindex="-1"
     							style="min-width: 150px;min-height: 12px;">
     							<xf:choices>
-    								<xf:itemset nodeset="">
-    									<xf:label ref=""></xf:label>
-    									<xf:value ref=""></xf:value>
+    								<xf:itemset nodeset="data:dc_code">
+    									<xf:label ref="CODE_NM"></xf:label>
+    									<xf:value ref="CODE_CD"></xf:value>
     								</xf:itemset>
     							</xf:choices>
     						</xf:select>
