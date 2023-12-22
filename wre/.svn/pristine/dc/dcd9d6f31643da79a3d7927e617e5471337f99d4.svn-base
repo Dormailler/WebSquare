@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko"><head><title>[DataList] 행의 상태값(rowStatus)이 'R'인 데이터를 JSON 형식으로 추출하기</title><link rel="stylesheet" href="css/book.css" type="text/css" /><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" /><meta name="EPB-UUID" content="db7d7f842b451ed6" /></head><body><div id="content"><h1 id="r_1b334be2365bd358" class="chapter_title">[DataList] 행의 상태값(rowStatus)이 'R'인 데이터를 JSON 형식으로 추출하기</h1><h1 id="r_d222137a78edb36c" class="element heading1" data-element-id="d222137a78edb36c"><div class="r_heading_inner"><span class="heading1_n">1</span><span>개요</span></div></h1><pre id="r_bd314013e0ce22c3" class="element pre" data-element-id="bd314013e0ce22c3">DataList의 'rowStatus'(행 상태)의 값이 'R'인 데이터를 JSON 형식으로 추출하는 방법입니다.
+이 기능은 아래의 두 함수를 호출하여 구현할 수 있습니다.
+- getRowIndexByStatus : 'rowStatus'(상태값)가 일치하는 행(Row)의 Index를 배열로 반환
+- getRowJSON : 행(Row)의 Index에 해당하는 데이터를 JSON객체로 반환</pre><p id="r_cbd4cc6fe1376785" class="element r_example_link_p" data-element-id="cbd4cc6fe1376785"><a class="link" href="http://example.websquare.kr/exampleLink.html?p=P00267">P00267</a></p><div id="r_a38ca8d64d0c6565" class="element note" data-element-id="a38ca8d64d0c6565"><p>DataList는 행(Row)마다 삽입, 수정, 삭제 등의 상태값(RowStatus)을 가지고 있습니다.</p><p>상태값은 행의 'rowStatus' 키에 할당되며 문자형 코드로 할당됩니다.</p><p class="blank"><br/></p><p>다음 목록은 상태값에 따른 문자형 코드값과 숫자형 코드값입니다.</p><p>- status : R / statusValue : 0 - 초기 상태. (변화없음)</p><p>- status : U / statusValue : 1 - 갱신. (수정)</p><p>- status : C / statusValue : 2 - 삽입. (insert API 호출 시)</p><p>- status : D / statusValue : 3 - 삭제. (delete API 호출 시)</p><p>- status : V / statusValue : 4 - 삽입 후 삭제. (insert 후 delete 호출 시)</p><p>- status : E / statusValue : 5 - 제거. (remove API 호출 시)</p></div><h1 id="r_c8ad9aaf9346a3ed" class="element heading1" data-element-id="c8ad9aaf9346a3ed"><div class="r_heading_inner"><span class="heading1_n">2</span><span>구현된 기능</span></div></h1><ul id="r_a94fca94b3502724" class="element unordered_list" data-element-id="a94fca94b3502724"><li><p>DataList의 'rowStatus'(행 상태)의 값이 'R'인 데이터의 인덱스 추출하기</p></li><li><p>DataList의 'rowStatus'(행 상태)의 값이 'R'인 데이터를 JSON 형식으로 추출하기</p></li></ul><h1 id="r_405cc4dec8ce4d26" class="element heading1" data-element-id="405cc4dec8ce4d26"><div class="r_heading_inner"><span class="heading1_n">3</span><span>예제 테스트 방법</span></div></h1><h2 id="r_15d6e9ae46aefb93" class="element heading2" data-element-id="15d6e9ae46aefb93"><div class="r_heading_inner"><span class="heading2_n">3.1</span><span>DataList의 'rowStatus'(행 상태)의 값이 'R'인 데이터의 인덱스 추출하기</span></div></h2><p id="r_edafd36f5596e673" class="element r_heading_dt_p" data-element-id="edafd36f5596e673">STEP1. 초기 상태 확인하기</p><pre id="r_ccb841f9d2db112d" class="element pre" data-element-id="ccb841f9d2db112d">실행된 GridView의 각 행의 상태 컬럼을 확인합니다.
+- 1번째 행 : 삽입 상태(C)
+- 2번째 행 : 초기 상태(R)
+- 3번째 행 : 삭제 상태(D)
+- 4번째 행 : 수정 상태(U)
+- 5번째 행 : 초기 상태(R)</pre><div id="r_1754e9ca8257c075" class="element image" data-element-id="1754e9ca8257c075"><p class="caption"><span class="image_caption_n">그림 1.</span>브라우저(Chrome) 실행 예시</p><p class="content"><img alt="" src="images/image038.png" width="355" height="191" /></p></div><p id="r_35cd9b5fce7813df" class="element r_heading_dt_p" data-element-id="35cd9b5fce7813df">STEP2. 버튼 <span class="r_exec_btn_style_span">Index 추출하기</span>를 클릭합니다.</p><pre id="r_204236091fcb375a" class="element pre" data-element-id="204236091fcb375a">영역 [<span class="r_blue001_span">로그 확인</span>]에 출력된 로그를 확인합니다.
+상태값이 'R'(초기 상태)인 행의 인덱스가 배열로 반환됩니다.
+결과 예시 ) [1,4] 
+-----------------------------------------------------------------
+<span class="r_title_log_span">로그 예시</span> 
+[14:51:08] 버튼 [Index 추출하기] 클릭 
+[14:51:08] # 'rowStatus'의 값이 'R'인 Row Index - return 예시) 
+[14:51:08] [1,4]
+-----------------------------------------------------------------
+(브라우저의 개발자 도구 콘솔에도 로그가 출력되며, 반환된 객체를 확인할 수 있습니다.)</pre><h2 id="r_51644f7f33c40c00" class="element heading2" data-element-id="51644f7f33c40c00"><div class="r_heading_inner"><span class="heading2_n">3.2</span><span>DataList의 'rowStatus'(행 상태)의 값이 'R'인 데이터를 JSON 형식으로 추출하기</span></div></h2><p id="r_9173712097f7ad5b" class="element r_heading_dt_p" data-element-id="9173712097f7ad5b">STEP1. 초기 상태 확인하기</p><pre id="r_a76a4fcb833f95c0" class="element pre" data-element-id="a76a4fcb833f95c0">실행된 GridView의 각 행의 상태 컬럼을 확인합니다.
+- 1번째 행 : 삽입 상태(C)
+- 2번째 행 : 초기 상태(R)
+- 3번째 행 : 삭제 상태(D)
+- 4번째 행 : 수정 상태(U)
+- 5번째 행 : 초기 상태(R)</pre><div id="r_59b044353acbbd8d" class="element image" data-element-id="59b044353acbbd8d"><p class="caption"><span class="image_caption_n">그림 2.</span>브라우저(Chrome) 실행 예시</p><p class="content"><img alt="" src="images/image038.png" width="355" height="191" /></p></div><p id="r_647d35383010b28d" class="element r_heading_dt_p" data-element-id="647d35383010b28d">STEP2. 버튼 <span class="r_exec_btn_style_span">JSON 형식으로 데이터 추출하기</span>를 클릭합니다.</p><pre id="r_04db4131ed5e76c3" class="element pre" data-element-id="04db4131ed5e76c3">영역 [<span class="r_blue001_span">로그 확인</span>]에 출력된 로그를 확인합니다.
+상태값이 'R'(초기 상태)인 행의 인덱스가 배열로 반환됩니다.
+결과 예시 ) [{ "book_name": "사람일까 상황일까", "published_date": "20190826", "rowStatus": "R" }, { "book_name": "공정하다는 착각", "published_date": "20201201", "rowStatus": "R" }]
+-----------------------------------------------------------------
+<span class="r_title_log_span">로그 예시</span> 
+[08:35:49] 버튼 [JSON 형식으로 데이터 추출하기] 클릭
+[08:35:49] # 'rowStatus'의 값이 'R'인 행의 데이터를 JSON 형식으로 추출하기 - return 예시)
+[08:35:50] [
+	{
+		"book_name": "사람일까 상황일까",
+		"published_date": "20190826",
+		"rowStatus": "R"
+	},
+	{
+		"book_name": "공정하다는 착각",
+		"published_date": "20201201",
+		"rowStatus": "R"
+	}
+]-----------------------------------------------------------------
+(브라우저의 개발자 도구 콘솔에도 로그가 출력되며, 반환된 객체를 확인할 수 있습니다.)</pre><h1 id="r_3f4644969ead7873" class="element heading1" data-element-id="3f4644969ead7873"><div class="r_heading_inner"><span class="heading1_n">4</span><span>구현 예시</span></div></h1><h2 id="r_0300a478ad7f98b3" class="element heading2" data-element-id="0300a478ad7f98b3"><div class="r_heading_inner"><span class="heading2_n">4.1</span><span>DataList의 'rowStatus'(행 상태)의 값이 'R'인 데이터의 인덱스 추출하기</span></div></h2><pre id="r_d64ebf439700daf9" class="element pre" data-element-id="d64ebf439700daf9">원하는 시점에 DataList의 함수 'getRowIndexByStatus'를 이용하여 스크립트를 작성합니다.</pre><p id="r_844268078480fab8" class="element r_bold_p" data-element-id="844268078480fab8">[소스 코드 예시]</p><div id="r_760331bd3d423377" class="element code support_code_numbering" data-element-id="760331bd3d423377"><pre><span class="digits_1 code_line"></span><span class="r_h_comment_span">//예제 파일에서는 스크립트 scwin.btn_ex1_onclick에 작성되어 있습니다.</span>
+<span class="digits_1 code_line"></span>
+<span class="digits_1 code_line"></span><span class="r_h_comment_span">// DataList 'dlt_books'의'rowStatus'의 값이 'R'인 Row Index를 배열로 추출합니다.</span>
+<span class="digits_1 code_line"></span><span class="r_h_keyword_span">let</span> arrResult = dlt_books.getRowIndexByStatus(<span class="r_h_string_span">"R"</span>);</pre></div><h2 id="r_615d8a09e01e88fd" class="element heading2" data-element-id="615d8a09e01e88fd"><div class="r_heading_inner"><span class="heading2_n">4.2</span><span>DataList의 'rowStatus'(행 상태)의 값이 'R'인 데이터를 JSON 형식으로 추출하기</span></div></h2><pre id="r_53a3541ab71e5f5d" class="element pre" data-element-id="53a3541ab71e5f5d">원하는 시점에 DataList의 함수 'getRowIndexByStatus'와 'getRowJSON'를 이용하여 스크립트를 작성합니다.</pre><p id="r_4d8ef76abb02dd20" class="element r_bold_p" data-element-id="4d8ef76abb02dd20">[소스 코드 예시]</p><div id="r_ad1fa0c7249a8436" class="element code support_code_numbering" data-element-id="ad1fa0c7249a8436"><pre><span class="digits_10 code_line"></span><span class="r_h_comment_span">//예제 파일에서는 스크립트 scwin.btn_ex2_onclick에 작성되어 있습니다.</span>
+<span class="digits_10 code_line"></span>
+<span class="digits_10 code_line"></span><span class="r_h_comment_span">// DataList 'dlt_books'의'rowStatus'의 값이 'R'인 Row Index를 배열로 추출합니다.</span>
+<span class="digits_10 code_line"></span><span class="r_h_keyword_span">let</span> arrRowIndex = dlt_books.getRowIndexByStatus(<span class="r_h_string_span">"R"</span>);
+<span class="digits_10 code_line"></span>
+<span class="digits_10 code_line"></span><span class="r_h_comment_span">// 변수 'arrRowIndex'의 길이를 추출합니다.</span>
+<span class="digits_10 code_line"></span><span class="r_h_keyword_span">let</span> numArrRowIdxLen = arrRowIndex.length;
+<span class="digits_10 code_line"></span>
+<span class="digits_10 code_line"></span><span class="r_h_comment_span">// 결과를 담을 배열을 선언합니다.</span>
+<span class="digits_10 code_line"></span><span class="r_h_keyword_span">let</span> arrResult = [];
+<span class="digits_10 code_line"></span>
+<span class="digits_10 code_line"></span><span class="r_h_comment_span">// 변수 'arrRowIndex'의 길이만큼 'for' 구문을 실행합니다.</span>
+<span class="digits_10 code_line"></span><span class="r_h_keyword_span">for</span> (<span class="r_h_keyword_span">let</span> i = <span class="r_h_number_span">0</span>; i &lt; numArrRowIdxLen; i++) {
+<span class="digits_10 code_line"></span>&nbsp;&nbsp;&nbsp;&nbsp;let numRowIndex = arrRowIndex[i]; <span class="r_h_comment_span">// 행의 Index</span>
+<span class="digits_10 code_line"></span>&nbsp;&nbsp;&nbsp;&nbsp;let jsnRowData = dlt_books.getRowJSON(numRowIndex); <span class="r_h_comment_span">// 행의 데이터를 JSON 형식으로 추출</span>
+<span class="digits_10 code_line"></span>
+<span class="digits_10 code_line"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="r_h_comment_span">// 추출한 JSON 형식의 데이터를 배열에 추가</span>
+<span class="digits_10 code_line"></span>&nbsp;&nbsp;&nbsp;&nbsp;arrResult.push(jsnRowData);
+<span class="digits_10 code_line"></span>}</pre></div><h1 id="r_d69054304cdabf05" class="element heading1" data-element-id="d69054304cdabf05"><div class="r_heading_inner"><span class="heading1_n">5</span><span>주요 API</span></div></h1><ul id="r_7c32f9d1f7af7277" class="element unordered_list" data-element-id="7c32f9d1f7af7277"><li><p><span class="r_ex_api_method_span">getRowIndexByStatus</span></p></li><li><p><span class="r_ex_api_method_span">getRowJSON</span></p></li></ul><h1 id="r_2107c17434b838b4" class="element heading1" data-element-id="2107c17434b838b4"><div class="r_heading_inner"><span class="heading1_n">6</span><span>참고 문서</span></div></h1><ul id="r_d065514460012c21" class="element unordered_list" data-element-id="d065514460012c21"><li><p><strong>[웹스퀘어5 SP5 개발 가이드] DataList</strong></p><p>링크 : <a class="link" href="https://docs1.inswave.com/sp5_user_guide/e8b94a03286e4f9f#9954ca390ab74983">https://docs1.inswave.com/sp5_user_guide/e8b94a03286e4f9f#9954ca390ab74983</a></p></li></ul></div></body></html>
