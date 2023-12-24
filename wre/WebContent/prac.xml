@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+    	<w2:type>COMPONENT</w2:type>
+    	<w2:buildDate />
+    	<w2:MSA />
+    	<xf:model>
+    		<w2:dataCollection baseNode="map">
+    			<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true">
+    				<w2:columnInfo>
+    					<w2:column id="col1" name="name1" dataType="text"></w2:column>
+    					<w2:column id="col2" name="name2" dataType="text"></w2:column>
+    					<w2:column id="col3" name="name3" dataType="text"></w2:column>
+    					<w2:column id="col4" name="name4" dataType="text"></w2:column>
+    					<w2:column id="col5" name="name5" dataType="text"></w2:column>
+    					<w2:column id="col6" name="name6" dataType="text"></w2:column>
+    					<w2:column id="col7" name="name7" dataType="text"></w2:column>
+    				</w2:columnInfo>
+    				<w2:data use="true">
+    					<w2:row></w2:row>
+    					<w2:row></w2:row>
+    					<w2:row></w2:row>
+    					<w2:row></w2:row>
+    					<w2:row></w2:row>
+    					<w2:row></w2:row>
+    					<w2:row></w2:row>
+    				</w2:data>
+    			</w2:dataList>
+    		</w2:dataCollection>
+    		<w2:workflowCollection />
+    	</xf:model>
+    	<w2:layoutInfo />
+    	<w2:publicInfo method="" />
+    	<script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	pg1.setCount(100);
+};
+
+ ]]></script>
+    	<style type="text/css"><![CDATA[ 
+    	.w2input{
+    		border:1px solid red;
+    	}
+    	]]></style>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<xf:input id="" style="width: 144px;height: 21px;" placeholder="아이디를 입력하세요."></xf:input>
+    	<xf:select selectedindex="-1" id="" appearance="full" style="" cols="" rows="1" ref="" renderType="checkboxgroup" tagname="ul"
+    		itemTagname="li">
+    		<xf:choices>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value><![CDATA[]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value><![CDATA[]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value><![CDATA[]]></xf:value>
+    			</xf:item>
+    		</xf:choices>
+    	</xf:select>
+    	<xf:select1 id="" selectedIndex="-1" appearance="full" style="" cols="" rows="1" ref="" renderType="radiogroup" tagname="ul"
+    		itemTagname="li">
+    		<xf:choices>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value><![CDATA[]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value><![CDATA[]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value><![CDATA[]]></xf:value>
+    			</xf:item>
+    		</xf:choices>
+    	</xf:select1>
+    	<xf:select1 id="" chooseOption="" style="width: 148px;" submenuSize="auto" allOption="" disabled="false" direction="auto"
+    		appearance="minimal" disabledClass="w2selectbox_disabled" ref="" renderType="component">
+    		<xf:choices>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value><![CDATA[]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[abc]]></xf:label>
+    				<xf:value><![CDATA[]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value><![CDATA[]]></xf:value>
+    			</xf:item>
+    		</xf:choices>
+    	</xf:select1>
+    	<xf:select1 allOption="" appearance="minimal" chooseOption="" direction="auto" disabled="false" disabledClass="w2selectbox_disabled"
+    		id="" ref="" renderType="component" style="width: 148px;" submenuSize="auto" labelWidthAuto="true">
+    		<xf:choices>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[abc]]></xf:label>
+    				<xf:value></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value></xf:value>
+    			</xf:item>
+    		</xf:choices>
+    	</xf:select1>
+    	<xf:select1 allOption="" appearance="minimal" chooseOption="" direction="auto" disabled="false" disabledClass="w2selectbox_disabled"
+    		id="" ref="" renderType="component" style="width: 148px;" submenuSize="fixed">
+    		<xf:choices>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[abc]]></xf:label>
+    				<xf:value></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value></xf:value>
+    			</xf:item>
+    		</xf:choices>
+    	</xf:select1>
+    	<w2:pageList pageSize="5" displayButtonType="display" id="pg1" displayFormat="#"
+    		style="position:static; top:26px; left:1px; width:350px; height:21px; " renderType="list">
+    	</w2:pageList>
+    	<xf:group tagname="table" style="width:100%;" id="" class="w2tb" adaptive="crosstab" adaptiveThreshold="800">
+    		<w2:attributes>
+    			<w2:summary></w2:summary>
+    		</w2:attributes>
+    		<xf:group tagname="caption"></xf:group>
+    		<xf:group tagname="colgroup">
+    			<xf:group tagname="col" style="width:100px;"></xf:group>
+    			<xf:group tagname="col" style=""></xf:group>
+    			<xf:group tagname="col" style="width:100px;"></xf:group>
+    			<xf:group tagname="col" style=""></xf:group>
+    		</xf:group>
+    		<xf:group tagname="tr" style="">
+    			<xf:group tagname="th" class="w2tb_th">
+    				타이틀
+    				<w2:attributes>
+    					<w2:scope>row</w2:scope>
+    				</w2:attributes>
+    			</xf:group>
+    			<xf:group tagname="td" style="" class="w2tb_td">
+    				<xf:input id="" style="width: 144px;height: 21px;"></xf:input>
+    			</xf:group>
+    			<xf:group tagname="th" style="" class="w2tb_th">
+    				<w2:attributes>
+    					<w2:scope>row</w2:scope>
+    				</w2:attributes>
+    			</xf:group>
+    			<xf:group tagname="td" style="" class="w2tb_td"></xf:group>
+    		</xf:group>
+    		<xf:group tagname="tr">
+    			<xf:group tagname="th" class="w2tb_th">
+    				<w2:attributes>
+    					<w2:scope>row</w2:scope>
+    				</w2:attributes>
+    			</xf:group>
+    			<xf:group tagname="td" style="" class="w2tb_td">
+    				<xf:select1 id="" chooseOption="false" style="width: 148px;height: 21px;" submenuSize="auto" allOption="false"
+    					disabled="false" direction="auto" appearance="minimal" disabledClass="w2selectbox_disabled">
+    				</xf:select1>
+    			</xf:group>
+    			<xf:group tagname="th" style="" class="w2tb_th">
+    				<w2:attributes>
+    					<w2:scope>row</w2:scope>
+    				</w2:attributes>
+    			</xf:group>
+    			<xf:group tagname="td" style="" class="w2tb_td"></xf:group>
+    		</xf:group>
+    		<xf:group tagname="tr">
+    			<xf:group tagname="th" class="w2tb_th">
+    				<w2:attributes>
+    					<w2:scope>row</w2:scope>
+    				</w2:attributes>
+    			</xf:group>
+    			<xf:group tagname="td" style="" class="w2tb_td"></xf:group>
+    			<xf:group tagname="th" style="" class="w2tb_th">
+    				<w2:attributes>
+    					<w2:scope>row</w2:scope>
+    				</w2:attributes>
+    			</xf:group>
+    			<xf:group tagname="td" style="" class="w2tb_td"></xf:group>
+    		</xf:group>
+    	</xf:group>
+    	<w2:tabControl id="" alwaysDraw="false" style="height: 200px;" adaptive="layout" adaptiveThreshold="600" closable="true"
+    		tabScroll="true">
+    		<w2:tabs disabled="false" style="width:70px;height:30px;" id="tabs1" label="탭버튼 1"></w2:tabs>
+    		<w2:tabs disabled="false" style="width:70px;height:30px" id="tabs2" label="탭 버튼2"></w2:tabs>
+    		<w2:content alwaysDraw="false" style="height:170px" id="content1"></w2:content>
+    		<w2:content alwaysDraw="false" style="height:170px" id="content2"></w2:content>
+    	</w2:tabControl>
+    	<w2:gridView checkAllType="false" defaultCellHeight="20" id="" style="height: 150px;border: 1px solid red;"
+    		dataList="data:dataList1" autoFit="allColumn" rowNumVisible="true" rowNumWidth="50" rowNumHeaderValue="NO" rowStatusVisible="true"
+    		rowStatusWidth="50" rowStatusHeaderValue="상태" fixedRow="2">
+    		<w2:caption style="" id="caption2" value="this is a grid caption."></w2:caption>
+    		<w2:header style="" id="header2">
+    			<w2:row style="" id="row3">
+    				<w2:column width="70" inputType="text" style="" id="column9" value="선택" displayMode="label"></w2:column>
+    				<w2:column width="210" inputType="text" style="" id="column8" value="주소" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column7" value="name3" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column6" value="name4" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column5" value="name5" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column4" value="name6" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column3" value="name7" displayMode="label"></w2:column>
+    			</w2:row>
+    		</w2:header>
+    		<w2:gBody style="" id="gBody2">
+    			<w2:row style="" id="row4">
+    				<w2:column width="70" inputType="checkbox" style='height: 26px;' id="col1" value="" displayMode="label"></w2:column>
+    				<w2:column width="210" inputType="link" style="" id="col2" value="" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="button" style="" id="col3" value="" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="radio" style="" id="col4" value="" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="select" style="" id="col5" value="" displayMode="label" viewType="icon"></w2:column>
+    				<w2:column width="70" inputType="calendar" style="" id="col6" value="" displayMode="label" viewType="icon"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="col7" value="" displayMode="label"></w2:column>
+    			</w2:row>
+    		</w2:gBody>
+    	</w2:gridView>
+    	<w2:treeview id="" dataType="listed" tooltipGroupClass="false" style="width: 200px;height: 200px;" showCheckbox="true" checkAllChildNodes="true" renderType="virtual">
+    		<w2:node>
+    			<w2:label><![CDATA[New]]></w2:label>
+    			<w2:value><![CDATA[]]></w2:value>
+    			<w2:folder><![CDATA[]]></w2:folder>
+    			<w2:checkbox><![CDATA[]]></w2:checkbox>
+    			<w2:checkboxDisabled><![CDATA[]]></w2:checkboxDisabled>
+    			<w2:image><![CDATA[]]></w2:image>
+    			<w2:iconImage><![CDATA[]]></w2:iconImage>
+    			<w2:selectedImage><![CDATA[]]></w2:selectedImage>
+    			<w2:expandedImage><![CDATA[]]></w2:expandedImage>
+    			<w2:leafImage><![CDATA[]]></w2:leafImage>
+    		</w2:node>
+    		<w2:node>
+    			<w2:label><![CDATA[New]]></w2:label>
+    			<w2:value><![CDATA[]]></w2:value>
+    			<w2:folder><![CDATA[]]></w2:folder>
+    			<w2:checkbox><![CDATA[]]></w2:checkbox>
+    			<w2:checkboxDisabled><![CDATA[]]></w2:checkboxDisabled>
+    			<w2:image><![CDATA[]]></w2:image>
+    			<w2:iconImage><![CDATA[]]></w2:iconImage>
+    			<w2:selectedImage><![CDATA[]]></w2:selectedImage>
+    			<w2:expandedImage><![CDATA[]]></w2:expandedImage>
+    			<w2:leafImage><![CDATA[]]></w2:leafImage>
+    			<w2:node>
+    				<w2:label><![CDATA[New]]></w2:label>
+    				<w2:value><![CDATA[]]></w2:value>
+    				<w2:folder><![CDATA[]]></w2:folder>
+    				<w2:checkbox><![CDATA[]]></w2:checkbox>
+    				<w2:checkboxDisabled><![CDATA[]]></w2:checkboxDisabled>
+    				<w2:image><![CDATA[]]></w2:image>
+    				<w2:iconImage><![CDATA[]]></w2:iconImage>
+    				<w2:selectedImage><![CDATA[]]></w2:selectedImage>
+    				<w2:expandedImage><![CDATA[]]></w2:expandedImage>
+    				<w2:leafImage><![CDATA[]]></w2:leafImage>
+    			</w2:node>
+    			<w2:node>
+    				<w2:label><![CDATA[New]]></w2:label>
+    				<w2:value><![CDATA[]]></w2:value>
+    				<w2:folder><![CDATA[]]></w2:folder>
+    				<w2:checkbox><![CDATA[]]></w2:checkbox>
+    				<w2:checkboxDisabled><![CDATA[]]></w2:checkboxDisabled>
+    				<w2:image><![CDATA[]]></w2:image>
+    				<w2:iconImage><![CDATA[]]></w2:iconImage>
+    				<w2:selectedImage><![CDATA[]]></w2:selectedImage>
+    				<w2:expandedImage><![CDATA[]]></w2:expandedImage>
+    				<w2:leafImage><![CDATA[]]></w2:leafImage>
+    			</w2:node>
+    			<w2:node>
+    				<w2:label><![CDATA[New]]></w2:label>
+    				<w2:value><![CDATA[]]></w2:value>
+    				<w2:folder><![CDATA[]]></w2:folder>
+    				<w2:checkbox><![CDATA[]]></w2:checkbox>
+    				<w2:checkboxDisabled><![CDATA[]]></w2:checkboxDisabled>
+    				<w2:image><![CDATA[]]></w2:image>
+    				<w2:iconImage><![CDATA[]]></w2:iconImage>
+    				<w2:selectedImage><![CDATA[]]></w2:selectedImage>
+    				<w2:expandedImage><![CDATA[]]></w2:expandedImage>
+    				<w2:leafImage><![CDATA[]]></w2:leafImage>
+    			</w2:node>
+    			<w2:node>
+    				<w2:label><![CDATA[New]]></w2:label>
+    				<w2:value><![CDATA[]]></w2:value>
+    				<w2:folder><![CDATA[]]></w2:folder>
+    				<w2:checkbox><![CDATA[]]></w2:checkbox>
+    				<w2:checkboxDisabled><![CDATA[]]></w2:checkboxDisabled>
+    				<w2:image><![CDATA[]]></w2:image>
+    				<w2:iconImage><![CDATA[]]></w2:iconImage>
+    				<w2:selectedImage><![CDATA[]]></w2:selectedImage>
+    				<w2:expandedImage><![CDATA[]]></w2:expandedImage>
+    				<w2:leafImage><![CDATA[]]></w2:leafImage>
+    			</w2:node>
+    		</w2:node>
+    		<w2:node>
+    			<w2:label><![CDATA[New]]></w2:label>
+    			<w2:value><![CDATA[]]></w2:value>
+    			<w2:folder><![CDATA[]]></w2:folder>
+    			<w2:checkbox><![CDATA[]]></w2:checkbox>
+    			<w2:checkboxDisabled><![CDATA[]]></w2:checkboxDisabled>
+    			<w2:image><![CDATA[]]></w2:image>
+    			<w2:iconImage><![CDATA[]]></w2:iconImage>
+    			<w2:selectedImage><![CDATA[]]></w2:selectedImage>
+    			<w2:expandedImage><![CDATA[]]></w2:expandedImage>
+    			<w2:leafImage><![CDATA[]]></w2:leafImage>
+    			<w2:node>
+    				<w2:label><![CDATA[New]]></w2:label>
+    				<w2:value><![CDATA[]]></w2:value>
+    				<w2:folder><![CDATA[]]></w2:folder>
+    				<w2:checkbox><![CDATA[]]></w2:checkbox>
+    				<w2:checkboxDisabled><![CDATA[]]></w2:checkboxDisabled>
+    				<w2:image><![CDATA[]]></w2:image>
+    				<w2:iconImage><![CDATA[]]></w2:iconImage>
+    				<w2:selectedImage><![CDATA[]]></w2:selectedImage>
+    				<w2:expandedImage><![CDATA[]]></w2:expandedImage>
+    				<w2:leafImage><![CDATA[]]></w2:leafImage>
+    				<w2:node>
+    					<w2:label><![CDATA[New]]></w2:label>
+    					<w2:value><![CDATA[]]></w2:value>
+    					<w2:folder><![CDATA[]]></w2:folder>
+    					<w2:checkbox><![CDATA[]]></w2:checkbox>
+    					<w2:checkboxDisabled><![CDATA[]]></w2:checkboxDisabled>
+    					<w2:image><![CDATA[]]></w2:image>
+    					<w2:iconImage><![CDATA[]]></w2:iconImage>
+    					<w2:selectedImage><![CDATA[]]></w2:selectedImage>
+    					<w2:expandedImage><![CDATA[]]></w2:expandedImage>
+    					<w2:leafImage><![CDATA[]]></w2:leafImage>
+    				</w2:node>
+    			</w2:node>
+    		</w2:node>
+    		<w2:node>
+    			<w2:label><![CDATA[New]]></w2:label>
+    			<w2:value><![CDATA[]]></w2:value>
+    			<w2:folder><![CDATA[]]></w2:folder>
+    			<w2:checkbox><![CDATA[]]></w2:checkbox>
+    			<w2:checkboxDisabled><![CDATA[]]></w2:checkboxDisabled>
+    			<w2:image><![CDATA[]]></w2:image>
+    			<w2:iconImage><![CDATA[]]></w2:iconImage>
+    			<w2:selectedImage><![CDATA[]]></w2:selectedImage>
+    			<w2:expandedImage><![CDATA[]]></w2:expandedImage>
+    			<w2:leafImage><![CDATA[]]></w2:leafImage>
+    		</w2:node>
+    	</w2:treeview>
+    </body>
+</html>

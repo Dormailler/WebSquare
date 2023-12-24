@@ -1,0 +1,9 @@
+{
+   "charset": "UTF-8",
+   "reqMethod": "POST",
+   "serviceURL": "http://127.0.0.1:59453/edu/data/userInfo.json",
+   "contentType": "application/json",
+   "requestContent": "{\"dc_reqUserInfo\": {\"EMP_CD\": \"SampleValue_0\"}}",
+   "responseContent": "{\"dc_userInfo\":{\n\t\t\"ZIP_CD\": \"700251\",\n\t\t\"ASSIGNED_TASK\": null,\n\t\t\"GENDER_CD\": \"M\",\n\t\t\"JOIN_DATE\": \"20041008\",\n\t\t\"DUTY_CD\": \"04\",\n\t\t\"UPDATED_DATE\": \"2016-12-07\",\n\t\t\"ADDRESS2\": \"  \",\n\t\t\"CREATED_DATE\": \"2016-12-07\",\n\t\t\"EMP_CD\": 10000004,\n\t\t\"ADDRESS1\": \"대구 중구 서문로1가\",\n\t\t\"ROLE_CD\": \"03\",\n\t\t\"POSITION_CD\": \"04\",\n\t\t\"EMP_NM\": \"미길동\",\n\t\t\"EMAIL\": \"woka436@inswave03.com\"\n}}",
+   "sendTime": "2023-12-22 23:23:39"
+}

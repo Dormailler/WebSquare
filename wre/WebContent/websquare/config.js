@@ -74,7 +74,7 @@ export default {
       "@value": "false"
     },
     "stylesheet": {
-      "@earlyImportList": "/cm/css/base.css, /cm/css/contents.css, /frame/css/ws5_example.css, /frame/highlight/styles/vs.min.css,/css/example.css",
+      "@earlyImportList": "/cm/css/base.css,/cm/css/contents.css,/frame/css/ws5_example.css,/frame/highlight/styles/vs.min.css,/css/example.css",
       "@enable": "true",
       "@import": "link",
       "@value": "stylesheet_ext.css"
@@ -455,7 +455,10 @@ export default {
             }
           ]
         }
-      ]
+      ],
+      "rowNumWidth": {
+        "@value": "50"
+      }
     },
     "inputCalendar": {
       "validCheck": {

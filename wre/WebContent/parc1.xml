@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/content.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+    	<w2:type>COMPONENT</w2:type>
+    	<w2:buildDate />
+    	<w2:MSA />
+    	<xf:model>
+    		<w2:dataCollection baseNode="map" />
+    		<w2:workflowCollection />
+    	</xf:model>
+    	<w2:layoutInfo />
+    	<w2:publicInfo method="" />
+    	<script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	
+};
+]]></script>
+    	<style type="text/css"><![CDATA[
+    		#w2anchor2 {font-size: 16px; font-weight:bold;text-decoration: none;background: url(/img/arr.png) no-repeat; padding-left:20px;}
+    	 ]]></style>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+
+    	<w2:multiupload mode="html5_transparent" style="width:100px;height:30px;position:absolute;left:0px;top:0px;" id=""
+    		uploadButton="">
+    	</w2:multiupload>
+    	<xf:trigger type="button" id="" style="width: 100px;height: 30px;">
+    		<xf:label><![CDATA[버튼]]></xf:label>
+    	</xf:trigger>
+    	<xf:textarea id="" style="width: 300px;height: 100px;margin-left: 150px;"></xf:textarea>
+    	<w2:spinner skin="type2" buttonSize="30" inputReadOnly="false" id="" style="position: relative;width: 150px;"></w2:spinner>
+    	<w2:textbox id="" label="타이틀" style="width: 150px;height: 23px;" tagname="h1"></w2:textbox>
+    	<w2:span label="텍스트" style="" id=""></w2:span>
+    	<w2:autoComplete editType="select" id="" style="width:148px;height:21px;" submenuSize="auto" search="start" allOption=""
+    		chooseOption="" ref="">
+    		<w2:choices>
+    			<w2:item>
+    				<w2:label><![CDATA[new row]]></w2:label>
+    				<w2:value><![CDATA[]]></w2:value>
+    			</w2:item>
+    			<w2:item>
+    				<w2:label><![CDATA[new row]]></w2:label>
+    				<w2:value><![CDATA[]]></w2:value>
+    			</w2:item>
+    			<w2:item>
+    				<w2:label><![CDATA[new row]]></w2:label>
+    				<w2:value><![CDATA[]]></w2:value>
+    			</w2:item>
+    		</w2:choices>
+    	</w2:autoComplete>
+    	<xf:trigger type="button" id="" style="width: 80px;height: 23px;" class="btn_cm">
+    		<xf:label><![CDATA[]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger id="" style="width: 80px;height: 23px;" type="button">
+    		<xf:label></xf:label>
+    	</xf:trigger>
+    	<w2:anchor outerDiv="true" id="" style="width: 100px;height: 23px;" href="http://www.inswave.com" target="_blank">
+    		<xf:label><![CDATA[link]]></xf:label>
+    	</w2:anchor>
+    	<w2:upload imageStyle="position:absolute;vertical-align:middle;word-wrap:break-word"
+    		inputStyle="vertical-align:middle;word-wrap:break-word" style="width: 250px;" id="" title="파일 업로드">
+    	</w2:upload>
+    	<xf:group id="" style="width: 200px;height: 200px;" tagname="ul">
+    		<w2:textbox id="" label="텍스트를 입력하세요" style="width: 150px;height: 23px;" tagname="li"></w2:textbox>
+    		<w2:textbox id="" label="텍스트를 입력하세요" style="width: 150px;height: 23px;" tagname="li"></w2:textbox>
+    		<w2:textbox id="" label="텍스트를 입력하세요" style="width: 150px;height: 23px;" tagname="li"></w2:textbox>
+    		<w2:textbox id="" label="텍스트를 입력하세요" style="width: 150px;height: 23px;" tagname="li"></w2:textbox>
+    	</xf:group>
+    	<w2:wframe style="width: 500px;height: 300px;" id="" src="/cm/template/page/01_search_grid/search_grid.xml"></w2:wframe>
+    </body>
+</html>

@@ -24,7 +24,7 @@
 	<byteCheckEncoding value="utf-8"/>
 	<initScript value="false"/>
 	<clearMemory value="false"/>
-	<stylesheet earlyImportList="/cm/css/base.css, /cm/css/contents.css, /frame/css/ws5_example.css, /frame/highlight/styles/vs.min.css,/css/example.css" enable="true" import="link" value="stylesheet_ext.css"/>
+	<stylesheet earlyImportList="/cm/css/base.css,/cm/css/contents.css,/frame/css/ws5_example.css,/frame/highlight/styles/vs.min.css,/css/example.css" enable="true" import="link" value="stylesheet_ext.css"/>
 	<mediaInfo>
 		<media maxWidth="" minWidth="1025" name="desktop"/>
 		<media maxWidth="1024" minWidth="768" name="tablet"/>
@@ -122,46 +122,48 @@
 		</column>
 	</grid>
 	<gridView>
-		<drilldownFooterExpressionAllData value="true"/>
-		<rowNumStatusUniqueId value="true"/>
-		<preventMultipleClick value="true"/>
-		<drilldownRealRowIndexAll value="true"/>
-		<collectGarbage value="none"/>
-		<fastScroll value="true"/>
+		<drilldownFooterExpressionAllData value="true" />
+		<rowNumStatusUniqueId value="true" />
+		<preventMultipleClick value="true" />
+		<drilldownRealRowIndexAll value="true" />
+		<collectGarbage value="none" />
+		<fastScroll value="true" />
 		<dataType>
-			<date displayFormat="yyyy-MM-dd"/>
+			<date displayFormat="yyyy-MM-dd" />
 		</dataType>
-		<editType value="focus"/>
-		<rowNumBackgroundColor value="#e5eff7"/>
-		<selectedRowColor value="#fcf8e3"/>
-		<oddEvenColorDisplay value="true"/>
-		<evenRowBackgroundColor value="#f5f5f5"/>
-		<oddRowBackgroundColor value="#ffffff"/>
-		<rowMouseOver value="true"/>
-		<rowMouseOverColor value="#edf3fb"/>
-		<tooltipStyle value="padding:1px 3px 0;line-height:14px;font-size:12px;border:0;background-color:#5c85d4;color:#fff"/>
-		<noResultMessageVisible value="true"/>
-		<noResultMessage value="데이터가 없음"/>
-		<noResultMessageStyle value="position:absolute; left:40%; width:20%; top:40%; border:1px solid #b3b3b3; color:#383d41; font-size:12px; padding:5px; text-align:center; background:#fafafa"/>
-		<pasteMessage value="데이터 붙이는 중"/>
-		<getColumnVisible useRealColIndex="true"/>
-		<checkDisabledOnPaste value="true"/>
-		<checkReadOnlyOnPaste value="true"/>
-		<colIdToColIndex value="true"/>
+		<editType value="focus" />
+		<rowNumBackgroundColor value="#e5eff7" />
+		<selectedRowColor value="#fcf8e3" />
+		<oddEvenColorDisplay value="true" />
+		<evenRowBackgroundColor value="#f5f5f5" />
+		<oddRowBackgroundColor value="#ffffff" />
+		<rowMouseOver value="true" />
+		<rowMouseOverColor value="#edf3fb" />
+		<tooltipStyle value="padding:1px 3px 0;line-height:14px;font-size:12px;border:0;background-color:#5c85d4;color:#fff" />
+		<noResultMessageVisible value="true" />
+		<noResultMessage value="데이터가 없음" />
+		<noResultMessageStyle
+			value="position:absolute; left:40%; width:20%; top:40%; border:1px solid #b3b3b3; color:#383d41; font-size:12px; padding:5px; text-align:center; background:#fafafa" />
+		<pasteMessage value="데이터 붙이는 중" />
+		<getColumnVisible useRealColIndex="true" />
+		<checkDisabledOnPaste value="true" />
+		<checkReadOnlyOnPaste value="true" />
+		<colIdToColIndex value="true" />
 		<column inputType="text">
-			<editType value="select"/>
+			<editType value="select" />
 		</column>
 		<column inputType="select">
-			<chooseOptionLabel value="-선택-"/>
-			<eventPriority value="oneditend"/>
+			<chooseOptionLabel value="-선택-" />
+			<eventPriority value="oneditend" />
 		</column>
 		<column inputType="calendar">
-			<dataType value="date"/>
-			<displayFormat value="yyyy-MM" valueType="yearMonth"/>
-			<displayFormat value="yyyy-MM-dd" valueType="yearMonthDate"/>
-			<displayFormat value="yyyy-MM-dd HH:mm" valueType="yearMonthDateTime"/>
-			<displayFormat value="yyyy-MM-dd HH:mm:SS" valueType="yearMonthDateTimeSec"/>
+			<dataType value="date" />
+			<displayFormat value="yyyy-MM" valueType="yearMonth" />
+			<displayFormat value="yyyy-MM-dd" valueType="yearMonthDate" />
+			<displayFormat value="yyyy-MM-dd HH:mm" valueType="yearMonthDateTime" />
+			<displayFormat value="yyyy-MM-dd HH:mm:SS" valueType="yearMonthDateTimeSec" />
 		</column>
+		<rowNumWidth value="50"></rowNumWidth>
 	</gridView>
 	<inputCalendar>
 		<validCheck value="false"/>
