@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map">
+            	<w2:aliasDataMap scope="../../dma_dataMap1" id="adm_aliasDataMap1" studioSrc="/ui/main.xml"></w2:aliasDataMap>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	
+};
+
+scwin.btn1_onclick = function(e) {
+    alert($p.top().ipt1.getValue());
+};
+
+scwin.btn2_onclick = function(e) {
+    alert($p.parent().ipt1.getValue());
+};
+
+scwin.btn3_onclick = function(e) {
+    alert(ipt1.getValue());
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<w2:textbox id="" label="Sub" style="color:#FF8040;" tagname="h2"></w2:textbox>
+    	<xf:input id="ipt1" style="width: 144px;height: 21px;"></xf:input>
+    	<xf:input class="" id="" placeholder="" style="width:148px;" ref="data:adm_aliasDataMap1.key1"></xf:input>
+    	<xf:trigger class="btn_cm" ev:onclick="scwin.btn1_onclick" id="btn1" style="" type="button">
+    		<xf:label><![CDATA[main]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger class="btn_cm" ev:onclick="scwin.btn2_onclick" id="btn2" style="" type="button">
+    		<xf:label><![CDATA[middle]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger class="btn_cm" ev:onclick="scwin.btn3_onclick" id="btn3" style="" type="button">
+    		<xf:label><![CDATA[sub]]></xf:label>
+    	</xf:trigger>
+    </body>
+</html>
