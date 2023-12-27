@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map"/>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<xf:group class="sub_contents" id="" style="">
+    		<xf:group class="tblbox" id="" style="">
+    			<xf:group adaptive="layout" adaptiveThreshold="1000" class="w2tb tbl" id="" style="" tagname="table">
+    				<w2:attributes>
+    					<w2:summary></w2:summary>
+    				</w2:attributes>
+    				<xf:group tagname="colgroup">
+    					<xf:group style="width:150px;" tagname="col"></xf:group>
+    					<xf:group style="" tagname="col"></xf:group>
+    					<xf:group style="width:150px;" tagname="col"></xf:group>
+    					<xf:group style="" tagname="col"></xf:group>
+    				</xf:group>
+    				<xf:group style="" tagname="tr">
+    					<xf:group class="w2tb_th" style="" tagname="th">
+    						<w2:textbox class="req" id="" label="테이블헤더" ref="" style="" userData2=""></w2:textbox>
+    					</xf:group>
+    					<xf:group class="w2tb_td" style="" tagname="td"></xf:group>
+    					<xf:group class="w2tb_th " tagname="th">
+    						<w2:attributes></w2:attributes>
+    						<w2:textbox class="" id="" label="테이블헤더" ref="" style="" userData2=""></w2:textbox>
+    					</xf:group>
+    					<xf:group class="w2tb_td" tagname="td">
+    						<w2:attributes></w2:attributes>
+    					</xf:group>
+    				</xf:group>
+    				<xf:group tagname="tr">
+    					<xf:group class="w2tb_th " tagname="th">
+    						<w2:attributes>
+    							<w2:scope>row</w2:scope>
+    						</w2:attributes>
+    						<w2:textbox class="" id="" label="테이블헤더" ref="" style="" userData2=""></w2:textbox>
+    					</xf:group>
+    					<xf:group class="w2tb_td" tagname="td">
+    						<w2:attributes>
+    							<w2:colspan>1</w2:colspan>
+    							<w2:rowspan>1</w2:rowspan>
+    						</w2:attributes>
+    					</xf:group>
+    					<xf:group class="w2tb_th " tagname="th">
+    						<w2:attributes></w2:attributes>
+    						<w2:textbox class="" id="" label="테이블헤더" ref="" style="" userData2=""></w2:textbox>
+    					</xf:group>
+    					<xf:group class="w2tb_td" tagname="td">
+    						<w2:attributes></w2:attributes>
+    					</xf:group>
+    				</xf:group>
+    			</xf:group>
+    		</xf:group>
+    	</xf:group>
+    	<xf:group class="tbcbox" id="" style="">
+    		<w2:tabControl alwaysDraw="false" class="tbc" confirmFalseAction="new" confirmTrueAction="exist" id="" style="" tabScroll=""
+    			useConfirmMessage="false" useMoveNextTabFocus="false" useTabKeyOnly="true" adaptive="layout" adaptiveThreshold="700">
+    			<w2:tabs disabled="false" id="tabs1" label="탭1" style=""></w2:tabs>
+    			<w2:tabs disabled="false" id="tabs2" label="탭2" style=""></w2:tabs>
+    			<w2:tabs disabled="false" id="tabs3" label="탭3" style=""></w2:tabs>
+    			<w2:content alwaysDraw="false" id="content1" style="" src="/page/P00001.xml">
+    				<w2:textbox id="" label="Content" style="line-height:28px;height: 30px;text-align:center;width: 100%;"></w2:textbox>
+    			</w2:content>
+    			<w2:content alwaysDraw="false" id="content2" style="" src="/page/P00002.xml"></w2:content>
+    			<w2:content alwaysDraw="false" id="content3" style="" src="/page/P00003.xml"></w2:content>
+    		</w2:tabControl>
+    	</xf:group>
+    </body>
+</html>

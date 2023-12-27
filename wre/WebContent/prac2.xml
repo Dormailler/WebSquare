@@ -36,5 +36,6 @@ scwin.onpageload = function() {
     			</w2:item>
     		</w2:choices>
     	</w2:autoComplete>
+    	<xf:textarea id="" style="width:300px;height:38px;"></xf:textarea>
     </body>
 </html>

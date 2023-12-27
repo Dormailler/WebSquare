@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map">
+            	<w2:dataList baseNode="list" repeatNode="map" id="d_list" saveRemovedData="true">
+            		<w2:columnInfo>
+            			<w2:column id="col1" name="name1" dataType="text"></w2:column>
+            			<w2:column id="col2" name="name2" dataType="text"></w2:column>
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<col1><![CDATA[id1]]></col1>
+            				<col2><![CDATA[05]]></col2>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[id2]]></col1>
+            				<col2><![CDATA[07]]></col2>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" repeatNode="map" id="d_com" saveRemovedData="true">
+            		<w2:columnInfo>
+            			<w2:column id="code" name="name1" dataType="text"></w2:column>
+            			<w2:column id="name" name="name2" dataType="text"></w2:column>
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<code><![CDATA[01]]></code>
+            				<name><![CDATA[AA]]></name>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[02]]></code>
+            				<name><![CDATA[BB]]></name>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[03]]></code>
+            				<name><![CDATA[CC]]></name>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[04]]></code>
+            				<name><![CDATA[DD]]></name>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" repeatNode="map" id="dlt" saveRemovedData="true">
+            		<w2:columnInfo>
+            			<w2:column id="code" name="name1" dataType="text"></w2:column>
+            			<w2:column id="name" name="name2" dataType="text"></w2:column>
+            			<w2:column id="val" name="name3" dataType="text"></w2:column>
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<code><![CDATA[01]]></code>
+            				<name><![CDATA[aa]]></name>
+            				<val><![CDATA[true]]></val>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[02]]></code>
+            				<name><![CDATA[bb]]></name>
+            				<val><![CDATA[true]]></val>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[03]]></code>
+            				<name><![CDATA[cc]]></name>
+            				<val><![CDATA[false]]></val>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[04]]></code>
+            				<name><![CDATA[dd]]></name>
+            				<val><![CDATA[true]]></val>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<xf:input id="ipt1" style="width: 144px;height: 21px;" dataType="number" validateOnInput="true"></xf:input>
+    	<xf:input id="ipt2" style="width: 144px;height: 21px;" dataType="float" displayFormat="#,###.##" maxlength="4.2"
+    		validateOnInput="true">
+    	</xf:input>
+    	<w2:gridView checkAllType="false" defaultCellHeight="20" id="" style="width: 500px;height: 150px;" dataList="data:d_list">
+    		<w2:caption style="" id="caption2" value="this is a grid caption."></w2:caption>
+    		<w2:header style="" id="header2">
+    			<w2:row style="" id="row3">
+    				<w2:column width="70" inputType="text" style="" id="column4" value="name1" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column3" value="name2" displayMode="label"></w2:column>
+    			</w2:row>
+    		</w2:header>
+    		<w2:gBody style="" id="gBody2">
+    			<w2:row style="" id="row4">
+    				<w2:column width="70" inputType="text" style="" id="col1" value="" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="select" style="" id="col2" value="" displayMode="label" allOption="" chooseOption=""
+    					ref="" selectedData="false">
+    					<w2:choices>
+    						<w2:itemset nodeset="data:d_com">
+    							<w2:label ref="name"></w2:label>
+    							<w2:value ref="code"></w2:value>
+    						</w2:itemset>
+    					</w2:choices>
+    				</w2:column>
+    			</w2:row>
+    		</w2:gBody>
+    	</w2:gridView>
+    	<xf:select1 id="" chooseOption="" style="width: 148px;height: 21px;" submenuSize="auto" allOption="" disabled="false"
+    		direction="auto" appearance="minimal" disabledClass="w2selectbox_disabled" ref="" visibleColumn="val">
+    		<xf:choices>
+    			<xf:itemset nodeset="data:dlt">
+    				<xf:label ref="name"></xf:label>
+    				<xf:value ref="code"></xf:value>
+    			</xf:itemset>
+    		</xf:choices>
+    	</xf:select1>
+    	<xf:select1 id="" chooseOption="" style="width: 148px;height: 21px;" submenuSize="auto" allOption="" disabled="false"
+    		direction="auto" appearance="minimal" disabledClass="w2selectbox_disabled" ref="" enableColumn="val">
+    		<xf:choices>
+    			<xf:itemset nodeset="data:dlt">
+    				<xf:label ref="name"></xf:label>
+    				<xf:value ref="code"></xf:value>
+    			</xf:itemset>
+    		</xf:choices>
+    	</xf:select1>
+    	<w2:gridView checkAllType="false" defaultCellHeight="20" id="" style="width: 500px;height: 150px;" dataList="">
+    		<w2:caption style="" id="caption1" value="this is a grid caption."></w2:caption>
+    		<w2:header style="" id="header1">
+    			<w2:row style="" id="row1">
+    				<w2:column width="70" inputType="text" style="" id="column1" value="va" displayMode="label"></w2:column>
+    			</w2:row>
+    		</w2:header>
+    		<w2:gBody style="" id="gBody1">
+    			<w2:row style="" id="row2">
+    				<w2:column width="150" inputType="select" style="" id="column2" value="" displayMode="label" allOption=""
+    					chooseOption="" ref="">
+    					<w2:choices>
+    						<w2:itemset nodeset="data:dlt">
+    							<w2:label ref="name"></w2:label>
+    							<w2:value ref="code"></w2:value>
+    						</w2:itemset>
+    					</w2:choices>
+    				</w2:column>
+    			</w2:row>
+    		</w2:gBody>
+    	</w2:gridView>
+    	<w2:span label="Insert Text&lt;br&gt;aa" style="" id=""></w2:span>
+    </body>
+</html>
