@@ -55,8 +55,8 @@ scwin.btn3_onclick = function(e) {
     	<w2:tabControl id="t1" alwaysDraw="false" style="height: 200px;">
     		<w2:tabs disabled="false" style="width:70px;height:30px;" id="tabs1" label="1"></w2:tabs>
     		<w2:tabs disabled="false" style="width:70px;height:30px" id="tabs2" label="2"></w2:tabs>
-    		<w2:content alwaysDraw="false" style="height:170px" id="content1" src="/ui/middle.xml"></w2:content>
-    		<w2:content alwaysDraw="false" style="height:170px" id="content2" src="/ui/middle.xml"></w2:content>
+    		<w2:content alwaysDraw="false" style="height:170px" id="content1" src="/middle.xml"></w2:content>
+    		<w2:content alwaysDraw="false" style="height:170px" id="content2" src="/middle.xml"></w2:content>
     	</w2:tabControl>
 
 

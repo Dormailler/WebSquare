@@ -8,7 +8,7 @@
         <w2:MSA/>
         <xf:model>
             <w2:dataCollection baseNode="map">
-            	<w2:aliasDataMap scope="../dma_dataMap1" id="adm_aliasDataMap1" studioSrc="/ui/main.xml"></w2:aliasDataMap>
+            	<w2:aliasDataMap scope="../dma_dataMap1" id="adm_aliasDataMap1" studioSrc="/main.xml"></w2:aliasDataMap>
             </w2:dataCollection>
             <w2:workflowCollection/>
         </xf:model>
@@ -47,6 +47,6 @@ scwin.btn1_onclick = function(e) {
     	<xf:trigger class="btn_cm" id="btn3" style="" type="button" ev:onclick="scwin.btn3_onclick">
     		<xf:label><![CDATA[sub]]></xf:label>
     	</xf:trigger>
-    	<w2:wframe style="height: 100px;" id="w1" src="/ui/sub.xml"></w2:wframe>
+    	<w2:wframe style="height: 100px;" id="w1" src="/sub.xml"></w2:wframe>
     </body>
 </html>
