@@ -7,30 +7,189 @@
         <w2:buildDate/>
         <w2:MSA/>
         <xf:model>
-            <w2:dataCollection baseNode="map"/>
+            <w2:dataCollection baseNode="map">
+            	<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true">
+            		<w2:columnInfo>
+            			<w2:column id="col1" name="name1" dataType="text"></w2:column>
+            			<w2:column id="col2" name="name2" dataType="text"></w2:column>
+            			<w2:column id="col3" name="name3" dataType="text"></w2:column>
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<col1><![CDATA[1]]></col1>
+            				<col2><![CDATA[1]]></col2>
+            				<col3><![CDATA[1]]></col3>
+            			</w2:row>
+            			<w2:row>
+            				<col2><![CDATA[2]]></col2>
+            				<col1><![CDATA[2]]></col1>
+            				<col3><![CDATA[2]]></col3>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[3]]></col1>
+            				<col2><![CDATA[3]]></col2>
+            				<col3><![CDATA[2]]></col3>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[3]]></col1>
+            				<col3><![CDATA[2]]></col3>
+            				<col2><![CDATA[1]]></col2>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[11]]></col1>
+            				<col2><![CDATA[11]]></col2>
+            				<col3><![CDATA[4]]></col3>
+            			</w2:row>
+            			<w2:row>
+            				<col3><![CDATA[3]]></col3>
+            				<col2><![CDATA[3]]></col2>
+            				<col1><![CDATA[11]]></col1>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" repeatNode="map" id="dataList2" saveRemovedData="true">
+            		<w2:columnInfo>
+            			<w2:column id="col1" name="name1" dataType="text"></w2:column>
+            			<w2:column id="col2" name="name2" dataType="text"></w2:column>
+            			<w2:column id="col3" name="name3" dataType="text"></w2:column>
+            			<w2:column id="col4" name="name4" dataType="text"></w2:column>
+            			<w2:column id="col5" name="name5" dataType="text"></w2:column>
+            			<w2:column id="col6" name="name6" dataType="text"></w2:column>
+            			<w2:column id="col7" name="name7" dataType="text"></w2:column>
+            			<w2:column id="col8" name="name8" dataType="text"></w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            </w2:dataCollection>
             <w2:workflowCollection/>
         </xf:model>
         <w2:layoutInfo/>
         <w2:publicInfo method=""/>
         <script lazy="false" type="text/javascript"><![CDATA[
 scwin.onpageload = function() {
-	
+	scwin.trigger1_onclick = function(e) {
+    var opt = {
+        "headerExist":1,
+        "dateFormat":"MM-DD-yyyy"
+        };
+    opt.removeColumns = "0,1";
+    gv1.advancedExcelUpload(opt);
+    };
+
+};
+
+
+scwin.trigger2_onclick = function(e) {
+    gv2.mergeByCol();
+};
+
+scwin.trigger3_onclick = function(e) {
+    gv3.mergeFocusedCell();
+};
+
+scwin.trigger4_onclick = function(e) {
+    gv3.mergeSplitFocusedCell();
+};
+
+scwin.trigger5_onclick = function(e) {
+    gv3.mergeByCol();
+};
+
+scwin.trigger6_onclick = function(e) {
+    gv3.mergeClear();
+};
+
+scwin.trigger7_onclick = function(e) {
+    gv3.mergeByFree(0,0,2,2);
+};
+
+scwin.trigger8_onclick = function(e) {
+    gv3.unmergeByFree(0,0); // 시작점
+};
+
+scwin.trigger9_onclick = function(e) {
+    gv3.mergeCol(2,false); // 2번 열 제외 병합
+    gv3.mergeByCol();
+};
+
+scwin.trigger10_onclick = function(e) {
+    var status = gv3.getMerged(2, 2);
+    alert(status);
 };
 ]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
-    	<w2:gridView checkAllType="false" defaultCellHeight="20" id="" style="width: 500px;height: 150px;" dataList="">
-    		<w2:caption style="" id="caption1" value="this is a grid caption."></w2:caption>
-    		<w2:header style="" id="header1">
-    			<w2:row style="" id="row1">
-    				<w2:column width="70" inputType="text" style="" id="column1" value="" displayMode="label"></w2:column>
+    	<w2:gridView checkAllType="false" defaultCellHeight="20" id="gv1" style="width: 100%;height: 150px;float: left;"
+    		dataList="data:dataList2" useFilterList="true">
+    		<w2:caption style="" id="caption3" value="this is a grid caption."></w2:caption>
+    		<w2:header style="" id="header3">
+    			<w2:row style="" id="row5">
+    				<w2:column width="100" inputType="text" style="" id="column16" value="name1" displayMode="label"></w2:column>
+    				<w2:column width="100" inputType="text" style="" id="column15" value="name2" displayMode="label"></w2:column>
+    				<w2:column width="100" inputType="text" style="" id="column14" value="name3" displayMode="label"></w2:column>
+    				<w2:column width="100" inputType="text" style="" id="column13" value="name4" displayMode="label" useFilter="true"></w2:column>
+    				<w2:column width="100" inputType="text" style="" id="column12" value="name5" displayMode="label"></w2:column>
+    				<w2:column width="100" inputType="text" style="" id="column11" value="name6" displayMode="label"></w2:column>
+    				<w2:column width="100" inputType="text" style="" id="column10" value="name7" displayMode="label"></w2:column>
+    				<w2:column width="100" inputType="text" style="" id="column9" value="name8" displayMode="label"></w2:column>
     			</w2:row>
     		</w2:header>
-    		<w2:gBody style="" id="gBody1">
-    			<w2:row style="" id="row2">
-    				<w2:column width="70" inputType="text" style="" id="column2" value="" displayMode="label"></w2:column>
+    		<w2:gBody style="" id="gBody3">
+    			<w2:row style="" id="row6">
+    				<w2:column width="100" inputType="text" style="" id="col1" value="" displayMode="label"></w2:column>
+    				<w2:column width="100" inputType="text" style="" id="col2" value="" displayMode="label"></w2:column>
+    				<w2:column width="100" inputType="text" style="" id="col3" value="" displayMode="label"></w2:column>
+    				<w2:column width="100" inputType="text" style="" id="col4" value="" displayMode="label"></w2:column>
+    				<w2:column width="100" inputType="text" style="" id="col5" value="" displayMode="label"></w2:column>
+    				<w2:column width="100" inputType="text" style="" id="col6" value="" displayMode="label"></w2:column>
+    				<w2:column width="100" inputType="text" style="" id="col7" value="" displayMode="label"></w2:column>
+    				<w2:column width="100" inputType="text" style="" id="col8" value="" displayMode="label"></w2:column>
     			</w2:row>
     		</w2:gBody>
     	</w2:gridView>
+    	<xf:trigger type="button" id="trigger1" style="width: 80px;height: 23px;" ev:onclick="scwin.trigger1_onclick">
+    		<xf:label><![CDATA[엑셀업로드]]></xf:label>
+    	</xf:trigger>
+    	<w2:gridView checkAllType="false" defaultCellHeight="20" id="gv3" style="width: 500px;height: 150px;clear:both;"
+    		dataList="data:dataList1">
+    		<w2:caption style="" id="caption2" value="this is a grid caption."></w2:caption>
+    		<w2:header style="" id="header2">
+    			<w2:row style="" id="row3">
+    				<w2:column width="70" inputType="text" style="" id="column5" value="name1" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column4" value="name2" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column3" value="name3" displayMode="label"></w2:column>
+    			</w2:row>
+    		</w2:header>
+    		<w2:gBody style="" id="gBody2">
+    			<w2:row style="" id="row4">
+    				<w2:column width="70" inputType="text" style="" id="col1" value="" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="col2" value="" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="col3" value="" displayMode="label"></w2:column>
+    			</w2:row>
+    		</w2:gBody>
+    	</w2:gridView>
+    	<xf:trigger type="button" id="trigger3" style="width: 80px;height: 23px;" ev:onclick="scwin.trigger3_onclick">
+    		<xf:label><![CDATA[포커스 병합]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger type="button" id="trigger4" style="width: 100px;height: 23px;" ev:onclick="scwin.trigger4_onclick">
+    		<xf:label><![CDATA[포커스 병합 해제]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger type="button" id="trigger5" style="width: 80px;height: 23px;" ev:onclick="scwin.trigger5_onclick">
+    		<xf:label><![CDATA[열 병합]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger type="button" id="trigger6" style="width: 80px;height: 23px;" ev:onclick="scwin.trigger6_onclick">
+    		<xf:label><![CDATA[병합 해제]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger type="button" id="trigger7" style="width: 100px;height: 23px;" ev:onclick="scwin.trigger7_onclick">
+    		<xf:label><![CDATA[특정 영역 병합]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger type="button" id="trigger8" style="width: 100px;height: 23px;" ev:onclick="scwin.trigger8_onclick">
+    		<xf:label><![CDATA[영역 병합 해제]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger type="button" id="trigger9" style="width: 80px;height: 23px;" ev:onclick="scwin.trigger9_onclick">
+    		<xf:label><![CDATA[열 병합(제외)]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger type="button" id="trigger10" style="width: 80px;height: 23px;" ev:onclick="scwin.trigger10_onclick">
+    		<xf:label><![CDATA[상태확인]]></xf:label>
+    	</xf:trigger>
     </body>
 </html>

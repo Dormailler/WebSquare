@@ -18,7 +18,7 @@ scwin.onpageload = function() {
 };
 ]]></script>
     </head>
-    <body ev:onpageload="scwin.onpageload">
+    <body ev:onpageload="scwin.onpageload" style="height: 5000px;">
     	<xf:select1 id="" chooseOption="" style="width: 148px;height: 21px;" submenuSize="auto" allOption="" disabled="false"
     		direction="auto" appearance="minimal" disabledClass="w2selectbox_disabled" renderType="component" ref="" preventWheelEvent="true">
     		<xf:choices>
@@ -45,5 +45,67 @@ scwin.onpageload = function() {
     			</xf:item>
     		</xf:choices>
     	</xf:select1>
+    	<xf:select1 allOption="" appearance="minimal" chooseOption="" direction="auto" disabled="false" disabledClass="w2selectbox_disabled"
+    		id="" preventWheelEvent="true" ref="" renderType="component" style="width: 148px;height: 21px;" submenuSize="auto">
+    		<xf:choices>
+    			<xf:item>
+    				<xf:label><![CDATA[1]]></xf:label>
+    				<xf:value><![CDATA[1]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[2]]></xf:label>
+    				<xf:value><![CDATA[1]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value><![CDATA[]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value><![CDATA[]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value><![CDATA[]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value><![CDATA[]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value><![CDATA[]]></xf:value>
+    			</xf:item>
+    		</xf:choices>
+    	</xf:select1>
+    	<w2:autoComplete editType="select" id="" style="width: 148px;height: 21px;" submenuSize="auto" search="start" allOption=""
+    		chooseOption="" ref="" preventWheelEvent="true" wheelStop="true">
+    		<w2:choices>
+    			<w2:item>
+    				<w2:label><![CDATA[new row]]></w2:label>
+    				<w2:value><![CDATA[]]></w2:value>
+    			</w2:item>
+    			<w2:item>
+    				<w2:label><![CDATA[new row]]></w2:label>
+    				<w2:value><![CDATA[]]></w2:value>
+    			</w2:item>
+    			<w2:item>
+    				<w2:label><![CDATA[new row]]></w2:label>
+    				<w2:value><![CDATA[]]></w2:value>
+    			</w2:item>
+    			<w2:item>
+    				<w2:label><![CDATA[new row]]></w2:label>
+    				<w2:value><![CDATA[]]></w2:value>
+    			</w2:item>
+    			<w2:item>
+    				<w2:label><![CDATA[new row]]></w2:label>
+    				<w2:value><![CDATA[]]></w2:value>
+    			</w2:item>
+    			<w2:item>
+    				<w2:label><![CDATA[new row]]></w2:label>
+    				<w2:value><![CDATA[]]></w2:value>
+    			</w2:item>
+    		</w2:choices>
+    	</w2:autoComplete>
     </body>
 </html>

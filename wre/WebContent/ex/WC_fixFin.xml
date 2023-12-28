@@ -24,7 +24,7 @@ scwin.onpageload = function() {
 ]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
-    	<w2:windowContainer id="wc1" style="position: relative;width: 500px;height: 300px;" useFixButton="true"
+    	<w2:windowContainer id="wc1" style="position: relative;width: 500px;height: 300px;float: left;" useFixButton="true"
     		closeType="noneFixedWindow" nameLayerMove="true">
     		<w2:windowToolbar>
     			<w2:controlIconLayer>
