@@ -1,5 +1,14 @@
 eclipse.preferences.version=1
 encoding//WebContent/cm/css/common.css=UTF-8
+encoding//WebContent/ex/Calendar1.xml=UTF-8
+encoding//WebContent/ex/GridView1.xml=UTF-8
+encoding//WebContent/ex/WC2.xml=UTF-8
+encoding//WebContent/ex/WidgetContainer1.xml=UTF-8
+encoding//WebContent/ex/mapChart1.xml=UTF-8
+encoding//WebContent/ex/pageList1.xml=UTF-8
+encoding//WebContent/ex/selectBox1.xml=UTF-8
+encoding//WebContent/ex/trigger1.xml=UTF-8
+encoding//WebContent/ex/wframe1.xml=UTF-8
 encoding//WebContent/input.xml=UTF-8
 encoding//WebContent/page_component.xml=UTF-8
 encoding//WebContent/page_component1.xml=UTF-8

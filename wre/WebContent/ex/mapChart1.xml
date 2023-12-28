@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map"/>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	
+};
+
+scwin.select11_onviewchange = function(info) {
+    mapchart1.dataMapPath = "/Data/" + info.newValue;
+    mapchart1.changeMapPath(mapchart1.dataMapPath);
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<xf:select1 id="select11" chooseOption="true" style="width: 148px;height: 21px;" submenuSize="auto" allOption="" disabled="false"
+    		direction="auto" appearance="minimal" disabledClass="w2selectbox_disabled" ref="" chooseOptionLabel="연도 선택" ev:onviewchange="scwin.select11_onviewchange">
+    		<xf:choices>
+    			<xf:item>
+    				<xf:label><![CDATA[2009]]></xf:label>
+    				<xf:value><![CDATA[2009]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[2010]]></xf:label>
+    				<xf:value><![CDATA[2010]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[2011]]></xf:label>
+    				<xf:value><![CDATA[2011]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[2012]]></xf:label>
+    				<xf:value><![CDATA[2012]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[2013]]></xf:label>
+    				<xf:value><![CDATA[2013]]></xf:value>
+    			</xf:item>
+    		</xf:choices>
+    	</xf:select1>
+    	<w2:mapchart style="height: 500px;" id="mapchart1"></w2:mapchart>
+    </body>
+</html>

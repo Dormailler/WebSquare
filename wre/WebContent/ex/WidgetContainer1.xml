@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map"/>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	wg1.addWidgets({
+        id : "w1",
+        title: "위젯1",
+        src: "GridView1.xml",
+        scope: "true",
+        x: 0,
+        y: 0,
+        unitHeight : 2,
+        unitWidth : 1,
+        hasTitleBar : true
+    });
+    wg1.addWidgets({
+        id : "w2",
+        title: "위젯2",
+        src: "pageList1.xml",
+        scope: "true",
+        x: 0,
+        y: 0,
+        unitHeight : 1,
+        unitWidth : 1,
+        hasTitleBar : false
+    });
+    wg1.getWidgetById("w2").showTitle(true);
+    wg1.enableWidgetTitle(false);
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<w2:widgetContainer minUnitWidth="1" verticalMargin="0" threshold="null" params="false" mode="pushpull"
+    		style="height: 500px;" id="wg1" horizontalMargin="0" cols="8" unitHeightPixel="200" widgetResize="false">
+    	</w2:widgetContainer>
+    </body>
+</html>

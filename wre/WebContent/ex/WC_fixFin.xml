@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map"/>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	wc1.createWindow("윈도우1",null,"https://www.naver.com");
+    wc1.createWindow("윈도우2",null,"https://www.google.com");
+    wc1.createWindow("윈도우3",null,"https://www.inswave.com/");
+    wc2.createWindow("윈도우1",null,"https://www.naver.com");
+    wc2.createWindow("윈도우2",null,"https://www.google.com");
+    wc2.createWindow("윈도우3",null,"https://www.inswave.com/");
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<w2:windowContainer id="wc1" style="position: relative;width: 500px;height: 300px;" useFixButton="true"
+    		closeType="noneFixedWindow" nameLayerMove="true">
+    		<w2:windowToolbar>
+    			<w2:controlIconLayer>
+    				<w2:controlIcon></w2:controlIcon>
+    				<w2:controlIcon></w2:controlIcon>
+    				<w2:controlIcon></w2:controlIcon>
+    				<w2:controlIcon></w2:controlIcon>
+    				<w2:controlIcon></w2:controlIcon>
+    			</w2:controlIconLayer>
+    			<w2:nameLayer></w2:nameLayer>
+    			<w2:selectedNameLayer></w2:selectedNameLayer>
+    		</w2:windowToolbar>
+    	</w2:windowContainer>
+    	<w2:windowContainer id="wc2" style="position: relative;width: 500px;height: 300px;">
+    		<w2:windowToolbar>
+    			<w2:controlIconLayer>
+    				<w2:controlIcon></w2:controlIcon>
+    				<w2:controlIcon></w2:controlIcon>
+    				<w2:controlIcon></w2:controlIcon>
+    				<w2:controlIcon></w2:controlIcon>
+    				<w2:controlIcon></w2:controlIcon>
+    			</w2:controlIconLayer>
+    			<w2:nameLayer></w2:nameLayer>
+    			<w2:selectedNameLayer></w2:selectedNameLayer>
+    		</w2:windowToolbar>
+    	</w2:windowContainer>
+    </body>
+</html>
