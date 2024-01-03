@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map"/>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	
+};
+
+scwin.trigger1_onclick = function(e) {
+    var date = in1.getValue();
+    ic1.disableBeforeDate(date)
+};
+
+scwin.trigger2_onclick = function(e) {
+    var date = in1.getValue();
+    ic1.disableAfterDate(date)
+};
+scwin.ic1_invalidMessageFunc = function(){
+    var opt = {
+        "id":"popup2",
+        "type":"wframePopup",
+        "width":"440px",
+        "height":"90px",
+        "top":100,
+        "left":300,
+        "popupName":"데이트 유효성 에러",
+        "modal":true,
+        "title":"데이트 유효성 에러",
+        "dataObject":{
+            "type":"string",
+            "date":this.callerId,
+            "name":"callerId"
+        }
+    };
+    $p.openPopup("messagePopup.xml", opt);
+    ic1.setValueCancel();
+
+}
+
+scwin.fn_msg = function(){
+    var msg = "";
+     var invalidType = this.getType();  
+     if (invalidType == "mandatory") {
+         msg = "Enter a date. 날짜를 입력하세요. ";
+    } else {
+         msg = "Invalid date. 날짜 형식을 확인하세요.";
+     }
+     alert(msg); 
+ };]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<xf:input id="in1" style="width:175px;height:21px;"></xf:input>
+    	<xf:trigger type="button" id="trigger1" style="width:166px;height:23px;" ev:onclick="scwin.trigger1_onclick">
+    		<xf:label><![CDATA[disableBeforeDate]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger type="button" id="trigger2" style="width:164px;height:23px;" ev:onclick="scwin.trigger2_onclick">
+    		<xf:label><![CDATA[disableAfterDate]]></xf:label>
+    	</xf:trigger>
+    	<w2:inputCalendar id="ic1" style="position:absolute;top:22px;left:0px;width:150px;height:23px;"
+    		calendarValueType="yearMonthDate" dateValidCheck="true" dateValidSet="true" dateValidSetCustom="true" validCheck="true" invalidMessageFunc="scwin.ic1_invalidMessageFunc" displaymessage="true">
+    	</w2:inputCalendar>
+    </body>
+</html>
