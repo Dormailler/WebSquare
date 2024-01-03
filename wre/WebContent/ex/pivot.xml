@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map">
+            	<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true">
+            		<w2:columnInfo>
+            			<w2:column id="col1" name="name1" dataType="text"></w2:column>
+            			<w2:column id="col2" name="name2" dataType="text"></w2:column>
+            			<w2:column id="col3" name="name3" dataType="text"></w2:column>
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<col1><![CDATA[600000000]]></col1>
+            				<col2><![CDATA[2000000000]]></col2>
+            				<col3><![CDATA[4]]></col3>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[3000000000]]></col1>
+            				<col2><![CDATA[400000000]]></col2>
+            				<col3><![CDATA[50000000000]]></col3>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[5]]></col1>
+            				<col2><![CDATA[6]]></col2>
+            				<col3><![CDATA[6000000000]]></col3>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[5]]></col1>
+            				<col2><![CDATA[6]]></col2>
+            				<col3><![CDATA[4]]></col3>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[1]]></col1>
+            				<col2><![CDATA[6]]></col2>
+            				<col3><![CDATA[4]]></col3>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[3]]></col1>
+            				<col2><![CDATA[6]]></col2>
+            				<col3><![CDATA[4]]></col3>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[600000000]]></col1>
+            				<col2><![CDATA[4]]></col2>
+            				<col3><![CDATA[400000000]]></col3>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	
+};
+
+scwin.trigger1_onclick = function(e) {
+    var options = {};
+    options.type = "1";
+    options.fileName = "e.xls";
+    options.bodyFormat = "#,###,0#";
+    options.bodyTextAlign = "right";
+    options.autoSizeColumn = "header";
+
+    p1.pivotExcelDownload(options);
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<w2:pivot style="width: 500px;height: 300px;" dataList="data:dataList1" vals="col2" rows="col1" cols="col3" id="p1" headerYMerge="true">
+    		<w2:fieldInfo>
+    			<w2:field name="name1" id="col1"></w2:field>
+    			<w2:field name="name2" id="col2"></w2:field>
+    			<w2:field name="name3" id="col3"></w2:field>
+    		</w2:fieldInfo>
+    	</w2:pivot>
+    	<xf:trigger type="button" id="trigger1" style="width:275px;height:23px;" ev:onclick="scwin.trigger1_onclick">
+    		<xf:label><![CDATA[pivotExcelDownload]]></xf:label>
+    	</xf:trigger>
+    </body>
+</html>
