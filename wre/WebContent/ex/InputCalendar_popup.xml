@@ -29,7 +29,7 @@ scwin.trigger2_onclick = function(e) {
 scwin.ic1_invalidMessageFunc = function(){
     var opt = {
         "id":"popup2",
-        "type":"wframePopup",
+        "type":"browserPopup", // wframePopup
         "width":"440px",
         "height":"90px",
         "top":100,

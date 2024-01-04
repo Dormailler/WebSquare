@@ -107,5 +107,26 @@ scwin.onpageload = function() {
     			</w2:item>
     		</w2:choices>
     	</w2:autoComplete>
+    	<xf:select1 id="" chooseOption="" style="width: 148px;height: 21px;" submenuSize="auto" allOption="" disabled="false"
+    		direction="auto" appearance="minimal" disabledClass="w2selectbox_disabled" ref="" labelWidthAuto="true">
+    		<xf:choices>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value><![CDATA[]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value><![CDATA[]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value><![CDATA[]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[adsasdsasadaddqwnjerklnqwklrnqowrnokwlqnrpqrlkqwnrlk]]></xf:label>
+    				<xf:value><![CDATA[]]></xf:value>
+    			</xf:item>
+    		</xf:choices>
+    	</xf:select1>
     </body>
 </html>

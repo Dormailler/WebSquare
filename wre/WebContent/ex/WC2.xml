@@ -3,16 +3,16 @@
     xmlns:ev="http://www.w3.org/2001/xml-events"
     xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
     <head>
-        <w2:type>COMPONENT</w2:type>
-        <w2:buildDate/>
-        <w2:MSA/>
-        <xf:model>
-            <w2:dataCollection baseNode="map"/>
-            <w2:workflowCollection/>
-        </xf:model>
-        <w2:layoutInfo/>
-        <w2:publicInfo method=""/>
-        <script lazy="false" type="text/javascript"><![CDATA[
+    	<w2:type>COMPONENT</w2:type>
+    	<w2:buildDate />
+    	<w2:MSA />
+    	<xf:model>
+    		<w2:dataCollection baseNode="map" />
+    		<w2:workflowCollection />
+    	</xf:model>
+    	<w2:layoutInfo />
+    	<w2:publicInfo method="" />
+    	<script lazy="false" type="text/javascript"><![CDATA[
 scwin.onpageload = function() {
 	scwin.trigger1_onclick = function(e) {
     wc1.createWindow({
@@ -20,7 +20,7 @@ scwin.onpageload = function() {
         src:"https://www.naver.com",
         refid: "sub_w1",
         id: "sub_w1",
-        windowId:""
+        windowId:"",
     });
     wc1.createWindow("윈도우2",null,"https://www.google.com");
     wc1.createWindow("윈도우3",null,"https://www.inswave.com/");
@@ -46,10 +46,40 @@ scwin.onpageload = function() {
 
 };
 
+
+scwin.trigger5_onclick = function(e) {
+    var winobj = {
+        title: "600X300",
+        src:"window_src.xml",
+        windowTitle: "600X300_title",
+        windowId:"600X300_ID",
+        frameMode:"wframe",
+        defaultWidth:"600",
+        defaultHeight:"300"
+    }
+    wc1.createWindow(winobj);
+};
+
+scwin.trigger6_onclick = function(e) {
+    var winobj = {
+        title: "200X200",
+        src:"window_src.xml",
+        windowTitle: "200X200_title",
+        windowId:"200X200_ID",
+        frameMode:"wframe",
+        defaultWidth:"200",
+        defaultHeight:"200"
+    }
+    wc1.createWindow(winobj);
+};
 ]]></script>
+    	<style type="text/css"><![CDATA[
+    		.w2window_selected {border:10px solid green;}
+    	 ]]></style>
     </head>
     <body ev:onpageload="scwin.onpageload">
-    	<w2:windowContainer id="wc1" style="position: relative;width: 500px;height: 300px;" useFixButton="true" closeType="noneFixedWindow">
+    	<w2:windowContainer id="wc1" style="position: relative;width: 700px;height: 400px;" useFixButton="true" closeType="noneFixedWindow"
+    		useWindowScrollButton="true" nameLayerRearrange="true" windowMoveType="overflow">
     		<w2:windowToolbar>
     			<w2:controlIconLayer>
     				<w2:controlIcon></w2:controlIcon>
@@ -73,6 +103,12 @@ scwin.onpageload = function() {
     	</xf:trigger>
     	<xf:trigger type="button" id="trigger4" style="width: 80px;height: 23px;" ev:onclick="scwin.trigger4_onclick">
     		<xf:label><![CDATA[고정 생성]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger type="button" id="trigger5" style="width:141px;height:23px;" ev:onclick="scwin.trigger5_onclick">
+    		<xf:label><![CDATA[크기 생성(600X300)]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger type="button" id="trigger6" style="width:126px;height:23px;" ev:onclick="scwin.trigger6_onclick">
+    		<xf:label><![CDATA[크기 생성(200X200)]]></xf:label>
     	</xf:trigger>
     </body>
 </html>

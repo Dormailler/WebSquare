@@ -14,22 +14,11 @@
         <w2:publicInfo method=""/>
         <script lazy="false" type="text/javascript"><![CDATA[
 scwin.onpageload = function() {
-	scwin.callerId = $p.getParameter("callerId");
-};
-scwin.onpageload = function() {
-    var comp = $p.getComponentById(scwin.callerId);
-    // 현재 안됨..
-    if(comp && typeof comp.setValueCancel === "function"){
-        comp.setValueCancel();
-    }
-
+	
 };
 ]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
-    	<w2:textbox id="" label="날짜가 잘못되었습니다."
-    		style="width:319px;height:120px;font:30px;background: red;color:white;font-size-adjust:3;font-weight:100;" tagname="h1">
-    	</w2:textbox>
-    	<w2:wframe style="width: 500px;height: 300px;" id="" src="/ex/popup.xml"></w2:wframe>
+    	<w2:textbox id="" label="소스코드" style="width: 150px;height: 23px;" tagname="h1"></w2:textbox>
     </body>
 </html>

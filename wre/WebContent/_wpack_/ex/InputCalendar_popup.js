@@ -1,4 +1,4 @@
-/*amd /ex/InputCalendar.xml 2485 5ae3b72a8682a86040b3da16563f1f27add7674d64de4de9e2d3da02d6f32bbe */
+/*amd /ex/InputCalendar_popup.xml 2501 d96733b0d5f002135f9bfa985793638b151c0e90b2a5988b265e974cc5be4c33 */
 define({declaration:{A:{version:'1.0',encoding:'UTF-8'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',E:[{T:1,N:'w2:type',E:[{T:3,text:'COMPONENT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'w2:MSA'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'}},{T:1,N:'w2:workflowCollection'}]},{T:1,N:'w2:layoutInfo'},{T:1,N:'w2:publicInfo',A:{method:''}},{T:1,N:'script',A:{lazy:'false',type:'text/javascript'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
 scwin.onpageload = function() {
 	
@@ -16,7 +16,7 @@ scwin.trigger2_onclick = function(e) {
 scwin.ic1_invalidMessageFunc = function(){
     var opt = {
         "id":"popup2",
-        "type":"wframePopup",
+        "type":"browserPopup", // wframePopup
         "width":"440px",
         "height":"90px",
         "top":100,
