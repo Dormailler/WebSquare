@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map"/>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	
+};
+
+scwin.input1_oneditfull = function() {
+    alert("최대범위 초과!");
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<xf:input id="input1" style="position:absolute;top:34px;left:162px;width:330px;height:52px;" trim="true" maxByteLength="7"
+    		autoFocus="true" ev:oneditfull="scwin.input1_oneditfull">
+    	</xf:input>
+    	<w2:textbox id="" label="trim" style="position:absolute;top:28px;left:25px;width:100px;height:52px;"></w2:textbox>
+    </body>
+</html>

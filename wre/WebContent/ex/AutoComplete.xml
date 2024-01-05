@@ -16,11 +16,16 @@
 scwin.onpageload = function() {
 	
 };
+
+scwin.autoComplete1_oneditkeyup = function(info,e) {
+    var message = ("이전값: " + info.oldValue + ", \n현재값: " + info.newValue + ", \n현재누른키코드: " + info.keyCode + "." );
+    alert(message);
+};
 ]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
-    	<w2:autoComplete editType="select" id="" style="width: 148px;height: 21px;" submenuSize="auto" search="contain" allOption=""
-    		chooseOption="" ref="" useKeywordHighlight="true">
+    	<w2:autoComplete editType="select" id="autoComplete1" style="width: 148px;height: 21px;" submenuSize="auto" search="contain"
+    		allOption="" chooseOption="" ref="" useKeywordHighlight="true" ev:oneditkeyup="scwin.autoComplete1_oneditkeyup">
     		<w2:choices>
     			<w2:item>
     				<w2:label><![CDATA[ad]]></w2:label>
@@ -36,5 +41,23 @@ scwin.onpageload = function() {
     			</w2:item>
     		</w2:choices>
     	</w2:autoComplete>
+    	<w2:autoComplete editType="select" id="" style="position:absolute;top:34px;left:2px;width:148px;height:21px;" submenuSize="auto"
+    		search="start" allOption="" chooseOption="" ref="" nextTabByEnter="true" nextTabID="i1">
+    		<w2:choices>
+    			<w2:item>
+    				<w2:label><![CDATA[a]]></w2:label>
+    				<w2:value><![CDATA[]]></w2:value>
+    			</w2:item>
+    			<w2:item>
+    				<w2:label><![CDATA[b]]></w2:label>
+    				<w2:value><![CDATA[]]></w2:value>
+    			</w2:item>
+    			<w2:item>
+    				<w2:label><![CDATA[c]]></w2:label>
+    				<w2:value><![CDATA[]]></w2:value>
+    			</w2:item>
+    		</w2:choices>
+    	</w2:autoComplete>
+    	<xf:input id="i1" style="position:absolute;top:35px;left:168px;width:117px;height:34px;"></xf:input>
     </body>
 </html>

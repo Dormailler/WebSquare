@@ -67,8 +67,12 @@ scwin.fn_msg = function(){
     	<xf:trigger type="button" id="trigger2" style="width:164px;height:23px;" ev:onclick="scwin.trigger2_onclick">
     		<xf:label><![CDATA[disableAfterDate]]></xf:label>
     	</xf:trigger>
-    	<w2:inputCalendar id="ic1" style="position:absolute;top:22px;left:0px;width:150px;height:23px;"
-    		calendarValueType="yearMonthDate" dateValidCheck="true" dateValidSet="true" dateValidSetCustom="true" validCheck="true" invalidMessageFunc="scwin.ic1_invalidMessageFunc" displaymessage="true">
+    	<w2:inputCalendar id="ic1" style="position:absolute;top:22px;left:0px;width:150px;height:23px;" calendarValueType="yearMonthDate"
+    		dateValidCheck="true" dateValidSet="true" dateValidSetCustom="true" validCheck="true"
+    		invalidMessageFunc="scwin.ic1_invalidMessageFunc" displaymessage="true">
+    	</w2:inputCalendar>
+    	<w2:inputCalendar id="" style="position:absolute; top:52px; left:0px; width:150px; height:23px; "
+    		calendarValueType="yearMonthDate">
     	</w2:inputCalendar>
     </body>
 </html>

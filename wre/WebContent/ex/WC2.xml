@@ -79,7 +79,7 @@ scwin.trigger6_onclick = function(e) {
     </head>
     <body ev:onpageload="scwin.onpageload">
     	<w2:windowContainer id="wc1" style="position: relative;width: 700px;height: 400px;" useFixButton="true" closeType="noneFixedWindow"
-    		useWindowScrollButton="true" nameLayerRearrange="true" windowMoveType="overflow">
+    		useWindowScrollButton="true" nameLayerRearrange="true" windowMoveType="overflow" autoArrange="true">
     		<w2:windowToolbar>
     			<w2:controlIconLayer>
     				<w2:controlIcon></w2:controlIcon>
