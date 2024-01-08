@@ -111,6 +111,7 @@ scwin.onpageload = function() {
         // convertIndex type설정 반대로 올릴 컬럼명시
         "headerExist":1,
         "dateFormat":"MM-DD-yyyy"
+        // trim : 1 -> 공백제거
         };
     opt.removeColumns = "0,1";
     gv1.advancedExcelUpload(opt);
