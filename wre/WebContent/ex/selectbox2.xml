@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map">
+            	<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true">
+            		<w2:columnInfo>
+            			<w2:column id="col1" name="name1" dataType="text"></w2:column>
+            			<w2:column id="col2" name="name2" dataType="text"></w2:column>
+            			<w2:column id="Tooltip" name="name3" dataType="text"></w2:column>
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<col1><![CDATA[1]]></col1>
+            				<col2><![CDATA[5]]></col2>
+            				<Tooltip><![CDATA[zz]]></Tooltip>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[3]]></col1>
+            				<col2><![CDATA[6]]></col2>
+            				<Tooltip><![CDATA[dd]]></Tooltip>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[4]]></col1>
+            				<col2><![CDATA[7]]></col2>
+            				<Tooltip><![CDATA[ff]]></Tooltip>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" repeatNode="map" id="dataList2" saveRemovedData="true">
+            		<w2:columnInfo>
+            			<w2:column id="col1" name="name1" dataType="text"></w2:column>
+            			<w2:column id="col2" name="name2" dataType="text"></w2:column>
+            			<w2:column id="col3" name="name3" dataType="text"></w2:column>
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<col1><![CDATA[a]]></col1>
+            				<col2><![CDATA[a]]></col2>
+            				<col3><![CDATA[1]]></col3>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[k]]></col1>
+            				<col2><![CDATA[k]]></col2>
+            				<col3><![CDATA[2]]></col3>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[s]]></col1>
+            				<col2><![CDATA[s]]></col2>
+            				<col3><![CDATA[3]]></col3>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[b]]></col1>
+            				<col2><![CDATA[b]]></col2>
+            				<col3><![CDATA[3]]></col3>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[t]]></col1>
+            				<col2><![CDATA[t]]></col2>
+            				<col3><![CDATA[2]]></col3>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[u]]></col1>
+            				<col2><![CDATA[u]]></col2>
+            				<col3><![CDATA[1]]></col3>
+            			</w2:row><w2:row>
+            				<col1><![CDATA[sp]]></col1>
+            				<col2><![CDATA[sp]]></col2>
+            				<col3><![CDATA[2]]></col3>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[ba]]></col1>
+            				<col2><![CDATA[ba]]></col2>
+            				<col3><![CDATA[3]]></col3>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[m]]></col1>
+            				<col2><![CDATA[m]]></col2>
+            				<col3><![CDATA[3]]></col3>
+            			</w2:row>
+            			<w2:row>
+            				<col1><![CDATA[l]]></col1>
+            				<col2><![CDATA[l]]></col2>
+            				<col3><![CDATA[3]]></col3>
+            			</w2:row>
+            			
+            		</w2:data>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	
+};
+
+scwin.selectt = function(label,index){
+    var row = index + 1;
+    return row + "행입니다";
+}]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<xf:select1 allOption="" appearance="minimal" chooseOption="" direction="auto" disabled="false" disabledClass="w2selectbox_disabled"
+    		id="" preventWheelEvent="true" ref="" renderType="component" style="width: 148px;height: 21px;" submenuSize="auto">
+    		<xf:choices>
+    			<xf:item>
+    				<xf:label><![CDATA[1]]></xf:label>
+    				<xf:value><![CDATA[1]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[2]]></xf:label>
+    				<xf:value><![CDATA[1]]></xf:value>
+    			</xf:item>
+    		</xf:choices>
+    	</xf:select1>
+    	<xf:select1 allOption="" appearance="minimal" chooseOption="" direction="auto" disabled="false" disabledClass="w2selectbox_disabled"
+    		id="" ref="" renderType="component" style="width: 148px;height: 21px;" submenuSize="auto">
+    		<xf:choices>
+    			<xf:item>
+    				<xf:label><![CDATA[1]]></xf:label>
+    				<xf:value></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[2]]></xf:label>
+    				<xf:value></xf:value>
+    			</xf:item>
+    		</xf:choices>
+    	</xf:select1>
+    	<xf:select1 allOption="" appearance="minimal" chooseOption="" direction="auto" disabled="false" disabledClass="w2selectbox_disabled"
+    		id="" preventWheelEvent="true" ref="" renderType="component" style="width: 148px;height: 21px;" submenuSize="auto">
+    		<xf:choices>
+    			<xf:item>
+    				<xf:label><![CDATA[1]]></xf:label>
+    				<xf:value><![CDATA[1]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[2]]></xf:label>
+    				<xf:value><![CDATA[1]]></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value></xf:value>
+    			</xf:item>
+    		</xf:choices>
+    	</xf:select1>
+    	<w2:autoComplete allOption="" chooseOption="" editType="select" id="" preventWheelEvent="true" ref="" search="start"
+    		style="width: 148px;height: 21px;" submenuSize="auto" wheelStop="true">
+    		<w2:choices>
+    			<w2:item>
+    				<w2:label><![CDATA[new row]]></w2:label>
+    				<w2:value></w2:value>
+    			</w2:item>
+    			<w2:item>
+    				<w2:label><![CDATA[new row]]></w2:label>
+    				<w2:value></w2:value>
+    			</w2:item>
+    			<w2:item>
+    				<w2:label><![CDATA[new row]]></w2:label>
+    				<w2:value></w2:value>
+    			</w2:item>
+    			<w2:item>
+    				<w2:label><![CDATA[new row]]></w2:label>
+    				<w2:value></w2:value>
+    			</w2:item>
+    			<w2:item>
+    				<w2:label><![CDATA[new row]]></w2:label>
+    				<w2:value></w2:value>
+    			</w2:item>
+    			<w2:item>
+    				<w2:label><![CDATA[new row]]></w2:label>
+    				<w2:value></w2:value>
+    			</w2:item>
+    		</w2:choices>
+    	</w2:autoComplete>
+    	<xf:select1 allOption="" appearance="minimal" chooseOption="" direction="auto" disabled="false" disabledClass="w2selectbox_disabled"
+    		id="" labelWidthAuto="true" preventKeyList="38,40,13" ref="" style="width: 148px;height: 21px;" submenuSize="auto">
+    		<xf:choices>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[new row]]></xf:label>
+    				<xf:value></xf:value>
+    			</xf:item>
+    			<xf:item>
+    				<xf:label><![CDATA[adsasdsasadaddqwnjerklnqwklrnqowrnokwlqnrpqrlkqwnrlk]]></xf:label>
+    				<xf:value></xf:value>
+    			</xf:item>
+    		</xf:choices>
+    	</xf:select1>
+    	<xf:select1 id="" chooseOption="" style="position:absolute; top:109px; left:33px; width:200px; height:27px; " submenuSize="auto"
+    		allOption="" disabled="false" direction="auto" appearance="minimal" disabledClass="w2selectbox_disabled" ref=""
+    		itemTooltipDisplay="true" itemTooltipFormatter="scwin.selectt">
+    		<xf:choices>
+    			<xf:itemset nodeset="data:dataList1">
+    				<xf:label ref="col1"></xf:label>
+    				<xf:value ref="col2"></xf:value>
+    			</xf:itemset>
+    		</xf:choices>
+    	</xf:select1>
+    	<xf:select1 id="" chooseOption="" style="position:absolute; top:173px; left:31px; width:200px; height:31px; " submenuSize="auto"
+    		allOption="" disabled="false" direction="auto" appearance="minimal" disabledClass="w2selectbox_disabled" ref="" depthColumn="col3">
+    		<xf:choices>
+    			<xf:itemset nodeset="data:dataList2">
+    				<xf:label ref="col1"></xf:label>
+    				<xf:value ref="col2"></xf:value>
+    			</xf:itemset>
+    		</xf:choices>
+    	</xf:select1>
+    </body>
+</html>

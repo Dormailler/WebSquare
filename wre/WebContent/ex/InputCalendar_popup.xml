@@ -57,7 +57,11 @@ scwin.fn_msg = function(){
          msg = "Invalid date. 날짜 형식을 확인하세요.";
      }
      alert(msg); 
- };]]></script>
+ };
+scwin.trigger3_onclick = function(e) {
+    c2.disableDate("20240111");
+};
+]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
     	<xf:input id="in1" style="width:175px;height:21px;"></xf:input>
@@ -74,5 +78,11 @@ scwin.fn_msg = function(){
     	<w2:inputCalendar id="" style="position:absolute; top:52px; left:0px; width:150px; height:23px; "
     		calendarValueType="yearMonthDate">
     	</w2:inputCalendar>
+    	<w2:inputCalendar id="c2" style="position:absolute; top:91px; left:1px; width:146px; height:25px; " calendarValueType="yearMonthDate"
+    		pickerType="dynamic">
+    	</w2:inputCalendar>
+    	<xf:trigger type="button" id="trigger3" style="position:absolute; top:91px; left:165px; width:158px; height:23px; " ev:onclick="scwin.trigger3_onclick">
+    		<xf:label><![CDATA[disableDate]]></xf:label>
+    	</xf:trigger>
     </body>
 </html>

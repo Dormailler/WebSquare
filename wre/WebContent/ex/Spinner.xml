@@ -22,5 +22,16 @@ scwin.onpageload = function() {
     	<w2:spinner skin="type1" buttonSize="30" inputReadOnly="false" id=""
     		style="position:absolute; top:49px; left:25px; width:136px; height:41px; " initValue="100">
     	</w2:spinner>
+    	<w2:spinner skin="type1" buttonSize="30" inputReadOnly="false" id=""
+    		style="position:absolute; top:107px; left:25px; width:150px; height:41px; " dataType="date">
+    	</w2:spinner>
+    	<w2:spinner skin="type1" buttonSize="30" inputReadOnly="false" id=""
+    		style="position:absolute; top:168px; left:25px; width:156px; height:54px; " dataType="time" dateIncrementType="second">
+    	</w2:spinner>
+    	<w2:spinner skin="type1" buttonSize="30" inputReadOnly="false" id=""
+    		style="position:absolute; top:258px; left:24px; width:174px; height:40px; " autoFocus="true" dataType="date" nextTabID="input2">
+    	</w2:spinner>
+    	<xf:input id="" style="position:absolute; top:259px; left:238px; width:157px; height:35px; "></xf:input>
+    	<xf:input id="" style="position:absolute; top:260px; left:436px; width:175px; height:34px; " nextTabID="input2"></xf:input>
     </body>
 </html>

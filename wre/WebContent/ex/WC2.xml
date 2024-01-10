@@ -72,14 +72,28 @@ scwin.trigger6_onclick = function(e) {
     }
     wc1.createWindow(winobj);
 };
-]]></script>
+
+scwin.trigger7_onclick = function(e) {
+    wc1.closeOthers();
+};
+
+
+scwin.onminimizedbtnclick = function(info){
+    alert("최소화버튼클릭/" + "src: " + info.src + "\ntitle: " + info.title + "\nwindowTitle: " + 
+    info.windowTitle + "\nid: " + info.id + "\nwindowId: "  + info.windowId);
+}
+
+scwin.onrestorebtnclick = function(info){
+    alert("최소화버튼클릭/" + "src: " + info.src + "\ntitle: " + info.title + "\nwindowTitle: " + 
+    info.windowTitle + "\nid: " + info.id + "\nwindowId: "  + info.windowId);
+}]]></script>
     	<style type="text/css"><![CDATA[
     		.w2window_selected {border:10px solid green;}
     	 ]]></style>
     </head>
     <body ev:onpageload="scwin.onpageload">
     	<w2:windowContainer id="wc1" style="position: relative;width: 700px;height: 400px;" useFixButton="true" closeType="noneFixedWindow"
-    		useWindowScrollButton="true" nameLayerRearrange="true" windowMoveType="overflow" autoArrange="true">
+    		useWindowScrollButton="true" nameLayerRearrange="true" windowMoveType="overflow" autoArrange="true" ev:onminimizebtnclick="scwin.onminimizedbtnclick" ev:onrestorebtnclick="scwin.onrestorebtnclick">
     		<w2:windowToolbar>
     			<w2:controlIconLayer>
     				<w2:controlIcon></w2:controlIcon>
@@ -109,6 +123,9 @@ scwin.trigger6_onclick = function(e) {
     	</xf:trigger>
     	<xf:trigger type="button" id="trigger6" style="width:126px;height:23px;" ev:onclick="scwin.trigger6_onclick">
     		<xf:label><![CDATA[크기 생성(200X200)]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger type="button" id="trigger7" style="width:135px;height:23px;" ev:onclick="scwin.trigger7_onclick">
+    		<xf:label><![CDATA[closeOthers()]]></xf:label>
     	</xf:trigger>
     </body>
 </html>

@@ -19,6 +19,38 @@ scwin.onpageload = function() {
 ]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
-    	<xf:group id="" style="position:absolute; top:89px; left:251px; width:238px; height:164px; "></xf:group>
-    </body>
+    	<xf:group id="" style="position:absolute; top:89px; left:251px; width:238px; height:164px; ">
+
+    	</xf:group>
+    <xf:group id="" style="padding: 10px;border: 2px solid black;margin: 10px;margin-top: 200px;"><xf:group style="border: 1px solid gray;padding: 5px;" id="">
+    		<xf:input style="width: 144px;height: 21px;" id=""></xf:input>
+    		<xf:trigger style="width: 80px;height: 23px;float: right;" id="" type="button">
+    			<xf:label><![CDATA[확인]]></xf:label>
+    		</xf:trigger>
+    	</xf:group><xf:group style="border: 1px solid gray;padding: 5px;" id="">
+    		<xf:input style="width: 144px;height: 21px;" id=""></xf:input>
+    		<xf:trigger style="width: 80px;height: 23px;float: right;" id="" type="button">
+    			<xf:label><![CDATA[확인]]></xf:label>
+    		</xf:trigger>
+    	</xf:group><xf:group style="border: 1px solid gray;padding: 5px;" id="">
+    		<xf:input style="width: 144px;height: 21px;" id=""></xf:input>
+    		<xf:trigger style="width: 80px;height: 23px;float: right;" id="" type="button">
+    			<xf:label><![CDATA[확인]]></xf:label>
+    		</xf:trigger>
+    	</xf:group><xf:group style="border: 1px solid gray;padding: 5px;" id="">
+    		<xf:input style="width: 144px;height: 21px;" id=""></xf:input>
+    		<xf:trigger style="width: 80px;height: 23px;float: right;" id="" type="button">
+    			<xf:label><![CDATA[확인]]></xf:label>
+    		</xf:trigger>
+    	</xf:group><xf:group style="border: 1px solid gray;padding: 5px;" id="">
+    		<xf:input style="width: 144px;height: 21px;" id=""></xf:input>
+    		<xf:trigger style="width: 80px;height: 23px;float: right;" id="" type="button">
+    			<xf:label><![CDATA[확인]]></xf:label>
+    		</xf:trigger>
+    	</xf:group><xf:group style="border: 1px solid gray;padding: 5px;" id="">
+    		<xf:input style="width: 144px;height: 21px;" id=""></xf:input>
+    		<xf:trigger style="width: 80px;height: 23px;float: right;" id="" type="button">
+    			<xf:label><![CDATA[확인]]></xf:label>
+    		</xf:trigger>
+    	</xf:group></xf:group></body>
 </html>

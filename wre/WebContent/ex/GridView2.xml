@@ -137,7 +137,7 @@ scwin.trigger1_onclick = function(e) {
     				<w2:column width="200" inputType="text" style="" id="col3" value="" displayMode="label"></w2:column>
     				<w2:column width="200" inputType="text" style="" id="col4" value="" displayMode="label"></w2:column>
     				<w2:column width="200" inputType="text" style="" id="col5" value="" displayMode="label" excelFormat="$#,###.00"
-    					displayFormat="$#,###.00">
+    					displayFormat="$#,###.00" blockSelect="true">
     				</w2:column>
     			</w2:row>
     		</w2:gBody>
@@ -160,7 +160,7 @@ scwin.trigger1_onclick = function(e) {
     		</w2:header>
     		<w2:gBody style="" id="gBody2">
     			<w2:row style="" id="row4">
-    				<w2:column width="140" inputType="checkbox" style="" id="column10" value="" displayMode="label" checkboxLabelColumn="col2,col3"></w2:column>
+    				<w2:column width="140" inputType="checkbox" style="" id="column10" value="" displayMode="value delim label" checkboxLabelColumn="col2,col3" delimiter=' - '></w2:column>
     				<w2:column width="142" inputType="radio" style="" id="column12" value="" displayMode="label" radioLabelColumn="col1,col2"></w2:column>
     				<w2:column width="120" inputType="text" style="" id="col1" value="" displayMode="label"></w2:column>
     				<w2:column width="120" inputType="text" style="" id="col2" value="" displayMode="label"></w2:column>

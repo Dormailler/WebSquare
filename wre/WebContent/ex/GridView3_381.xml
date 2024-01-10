@@ -158,7 +158,15 @@ scwin.trigger2_onclick = function(e) {
     						</w2:itemset>
     					</w2:choices>
     				</w2:column>
-    				<w2:column width="70" inputType="text" style="" id="col2" value="" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="autoComplete" style="" id="col2" value="" displayMode="label" viewType="icon"
+    					viewTypeIconImage="true" directOpen="true" allOption="" chooseOption="" ref="">
+    					<w2:choices>
+    						<w2:itemset nodeset="data:dataList2">
+    							<w2:label ref="col1"></w2:label>
+    							<w2:value ref="col2"></w2:value>
+    						</w2:itemset>
+    					</w2:choices>
+    				</w2:column>
     				<w2:column width="70" inputType="text" style="" id="col3" value="" displayMode="label"></w2:column>
     				<w2:column width="70" inputType="text" style="" id="col4" value="" displayMode="label"></w2:column>
     			</w2:row>

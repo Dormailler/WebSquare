@@ -16,21 +16,9 @@
 scwin.onpageload = function() {
 	
 };
-
-scwin.trigger1_onclick = function(e) {
-    WebSquare.util.openPopup("pageList1.xml",{id:"popup1",fullscreen:true});
-    
-    var info = $p.getEventTarget(this);
-    var pluginName = info.pluginName;
-    var id = info.id;
-    var realId = info.realId;
-    alert("행동 - (이름: " + pluginName + " / ID: " + id + " /REAL ID: " + realId);
-};
 ]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
-    	<xf:trigger type="button" id="trigger1" style="width: 80px;height: 23px;" ev:onclick="scwin.trigger1_onclick">
-    		<xf:label><![CDATA[팝업]]></xf:label>
-    	</xf:trigger>
+    	<xf:textarea id="" style="width: 300px;height: 100px;" placeholder="아무거나입력하세요" disabled="false" showPlaceHolderOnReadOnly="true" readOnly="true"></xf:textarea>
     </body>
 </html>
