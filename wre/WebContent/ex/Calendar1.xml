@@ -19,7 +19,7 @@ scwin.onpageload = function() {
 ]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
-    	<w2:calendar id="" style="width: 200px;height: 200px;"></w2:calendar>
+    	<w2:calendar id="" style="width: 200px;height: 200px;" visibleWeekNum="4"></w2:calendar>
     	<w2:calendar id="" style="width: 200px;height: 200px;" disableBeforeToday="true"></w2:calendar>
     	<w2:calendar id="" style="width: 200px;height: 200px;" disableAfterToday="true"></w2:calendar>
     </body>
