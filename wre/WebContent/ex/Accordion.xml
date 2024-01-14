@@ -35,5 +35,22 @@ scwin.onpageload = function() {
     			<w2:panelContent style="" id="panelContent3"></w2:panelContent>
     		</w2:panels>
     	</w2:accordion>
+    	<w2:accordion style="position:absolute; top:73px; left:287px; width:184px; height:260px; " id="">
+    		<w2:panels style="" id="panels4" class="">
+    			<w2:panelTitle style="" id="panelTitle4" label="zz"></w2:panelTitle>
+    			
+    			<w2:panelContent style="" id="panelContent4"><xf:trigger type="button" id="" style="width: 80px;height: 23px;">
+    				<xf:label><![CDATA[zz]]></xf:label>
+    			</xf:trigger></w2:panelContent>
+    		</w2:panels>
+    		<w2:panels style="" id="panels5" class="">
+    			<w2:panelTitle style="" id="panelTitle5" label="dd"></w2:panelTitle>
+    			<w2:panelContent style="" id="panelContent5"></w2:panelContent>
+    		</w2:panels>
+    		<w2:panels style="" id="panels6" class="">
+    			<w2:panelTitle style="" id="panelTitle6" label="ff"></w2:panelTitle>
+    			<w2:panelContent style="" id="panelContent6"></w2:panelContent>
+    		</w2:panels>
+    	</w2:accordion>
     </body>
 </html>

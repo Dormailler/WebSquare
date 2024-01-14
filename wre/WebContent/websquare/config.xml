@@ -36,6 +36,7 @@
 	<engine>
 		<module src="/frame/js/const.js"/>
 		<module src="/js/eduCommon.js"/>
+		<module src="/websquare/externalJS/big/big.min.js"/>
 	</engine>
 	<ModelUtil>
 		<copyChildrenNodes refresh="false"/>

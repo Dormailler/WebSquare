@@ -110,6 +110,9 @@ export default {
         },
         {
           "@src": "/js/eduCommon.js"
+        },
+        {
+          "@src": "/websquare/externalJS/big/big.min.js"
         }
       ]
     },

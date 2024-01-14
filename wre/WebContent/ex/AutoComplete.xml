@@ -42,7 +42,7 @@ scwin.autoComplete1_oneditkeyup = function(info,e) {
     		</w2:choices>
     	</w2:autoComplete>
     	<w2:autoComplete editType="select" id="" style="position:absolute;top:34px;left:2px;width:148px;height:21px;" submenuSize="auto"
-    		search="start" allOption="" chooseOption="" ref="" nextTabByEnter="true" nextTabID="i1">
+    		search="start" allOption="" chooseOption="true" ref="" nextTabByEnter="true" nextTabID="i1" preventKeyList="all" chooseOptionLabel="골라주세요." chooseOptionValue="1">
     		<w2:choices>
     			<w2:item>
     				<w2:label><![CDATA[a]]></w2:label>

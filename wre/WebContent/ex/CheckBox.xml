@@ -37,7 +37,7 @@ scwin.trigger1_onclick = function(e) {
     </head>
     <body ev:onpageload="scwin.onpageload">
     	<xf:checkcombobox id="" chooseOption="true" displayMode="label" style="width: 148px;height: 21px;" submenuSize="auto" allOption=""
-    		disabled="false" direction="auto" ref="" navBtn="true" title="선택하세요" chooseOptionLabel="선택하세요" visibleColMax="3">
+    		disabled="false" direction="auto" ref="" navBtn="true" title="선택하세요" chooseOptionLabel="선택하세요" visibleColMax="3" checkboxClickSync="true" showCheckedTop="true">
     		<xf:choices>
     			<xf:item>
     				<xf:label><![CDATA[lee]]></xf:label>
@@ -70,7 +70,7 @@ scwin.trigger1_onclick = function(e) {
     		<xf:label><![CDATA[값추가]]></xf:label>
     	</xf:trigger>
     	<xf:checkcombobox id="" chooseOption="" displayMode="label" style="position:absolute;top:22px;left:1px;width:204px;height:66px;"
-    		submenuSize="auto" allOption="" disabled="false" direction="auto" ref="" visibleColNum="5" useDrag="true" rangeSeparator="-" separator="," useEdit="true" validateOnInput="true">
+    		submenuSize="auto" allOption="" disabled="false" direction="auto" ref="" visibleColNum="5" useDrag="true" rangeSeparator="-" separator="," useEdit="true" validateOnInput="true" showCheckedTop="true" checkboxClickSync="true">
     		<xf:choices>
     			<xf:itemset nodeset="data:dataList1">
     				<xf:label ref="col1"></xf:label>
