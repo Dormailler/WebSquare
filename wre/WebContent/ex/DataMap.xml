@@ -23,6 +23,17 @@
             			<shape><![CDATA[Round]]></shape>
             		</w2:data>
             	</w2:dataMap>
+            	<w2:dataMap baseNode="map" id="dataMap2">
+            		<w2:keyInfo>
+            			<w2:key id="key1" name="name1" dataType="text"></w2:key>
+            			<w2:key id="key2" name="name2" dataType="text"></w2:key>
+            			<w2:key id="key3" name="name3" dataType="text"></w2:key>
+            		</w2:keyInfo>
+            		<w2:data use="true">
+            			<key1><![CDATA[Asia]]></key1>
+            			<key2><![CDATA[Korea]]></key2>
+            			<key3><![CDATA[Seoul]]></key3>
+            		</w2:data></w2:dataMap>
             </w2:dataCollection>
             <w2:workflowCollection/>
         </xf:model>
@@ -44,8 +55,10 @@ scwin.dataMap1_onbeforemodelchange = function(info) {
 ]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
-    	<xf:trigger type="button" id="trigger1" style="position:absolute;top:61px;left:75px;width:152px;height:52px;" ev:onclick="scwin.trigger1_onclick">
+    	<xf:trigger type="button" id="trigger1" style="position:absolute;top:61px;left:75px;width:152px;height:52px;"
+    		ev:onclick="scwin.trigger1_onclick">
     		<xf:label><![CDATA[datamap.set()]]></xf:label>
     	</xf:trigger>
+    	<xf:input id="" style="position:absolute; top:173px; left:80px; width:160px; height:47px; " ref="data:dataMap2.key3"></xf:input>
     </body>
 </html>
