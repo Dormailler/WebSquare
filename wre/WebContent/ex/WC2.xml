@@ -86,14 +86,19 @@ scwin.onminimizedbtnclick = function(info){
 scwin.onrestorebtnclick = function(info){
     alert("최소화버튼클릭/" + "src: " + info.src + "\ntitle: " + info.title + "\nwindowTitle: " + 
     info.windowTitle + "\nid: " + info.id + "\nwindowId: "  + info.windowId);
-}]]></script>
+}
+scwin.trigger8_onclick = function(e) {
+    wc1.setArrangeWindows("vertical", ["윈도우2","윈도우3"]);
+};
+]]></script>
     	<style type="text/css"><![CDATA[
     		.w2window_selected {border:10px solid green;}
     	 ]]></style>
     </head>
     <body ev:onpageload="scwin.onpageload">
     	<w2:windowContainer id="wc1" style="position: relative;width: 700px;height: 400px;" useFixButton="true" closeType="noneFixedWindow"
-    		useWindowScrollButton="true" nameLayerRearrange="true" windowMoveType="overflow" autoArrange="true" ev:onminimizebtnclick="scwin.onminimizedbtnclick" ev:onrestorebtnclick="scwin.onrestorebtnclick">
+    		useWindowScrollButton="true" nameLayerRearrange="true" windowMoveType="overflow" autoArrange="true"
+    		ev:onminimizebtnclick="scwin.onminimizedbtnclick" ev:onrestorebtnclick="scwin.onrestorebtnclick">
     		<w2:windowToolbar>
     			<w2:controlIconLayer>
     				<w2:controlIcon></w2:controlIcon>
@@ -126,6 +131,9 @@ scwin.onrestorebtnclick = function(info){
     	</xf:trigger>
     	<xf:trigger type="button" id="trigger7" style="width:135px;height:23px;" ev:onclick="scwin.trigger7_onclick">
     		<xf:label><![CDATA[closeOthers()]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger type="button" id="trigger8" style="position:absolute; top:401px; left:757px; width:120px; height:22px; " ev:onclick="scwin.trigger8_onclick">
+    		<xf:label><![CDATA[vertical]]></xf:label>
     	</xf:trigger>
     </body>
 </html>
