@@ -113,6 +113,13 @@ scwin.onpageload = function() {
         "headerExist":1,
         "dateFormat":"MM-DD-yyyy"
         // trim : 1 -> 공백제거
+        // sheetName: "sheet1" // 업로드할 시트지정
+        // wframe: true
+        // name: "업로드"
+        // features: "top=20,left=20,width=500,height=200" 크기,위치조정
+        // className: "style" // 임의클래스지정
+        // resizable: false
+        // windowDragMove : true
         };
     opt.removeColumns = "0,1";
     gv1.advancedExcelUpload(opt);
@@ -166,8 +173,13 @@ scwin.trigger11_onclick = function(e) {
 
 scwin.trigger12_onclick = function(e) {
     var opt = {
-
+        // useSubTotal:True,
+        // xxxFontBold:True - header,body,subTotal,footer
+        // useStyle:true - 바꾼 css 유지해서 다운
+        // colMerge:"true";
+        // colMergeValue:"true"
     };
+    opt.headerColor = "pink";
     opt.fileName = "test.xlsx";
     opt.customToDataType = "true";
     gv3.advancedExcelDownload(opt);
@@ -184,6 +196,11 @@ scwin.trigger13_onclick = function(e) {
 
 scwin.trigger14_onclick = function(e) {
     gv3.setDrillDownDragDrop(true); // inputType이 grilldown인 객체 드래그%드롭가능
+};
+
+scwin.trigger15_onclick = function(e) {
+    var opt = {};
+    gv3.readCSV(opt);
 };
 ]]></script>
     </head>
@@ -314,8 +331,12 @@ scwin.trigger14_onclick = function(e) {
     			</w2:row>
     		</w2:gBody>
     	</w2:gridView>
-    	<xf:trigger type="button" id="trigger14" style="position:absolute;top:353px;left:494px;width:178px;height:23px;" ev:onclick="scwin.trigger14_onclick">
+    	<xf:trigger type="button" id="trigger14" style="position:absolute;top:353px;left:494px;width:178px;height:23px;"
+    		ev:onclick="scwin.trigger14_onclick">
     		<xf:label><![CDATA[setDrillDownDragDrop]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger type="button" id="trigger15" style="width: 80px;height: 23px;" ev:onclick="scwin.trigger15_onclick">
+    		<xf:label><![CDATA[readCSV]]></xf:label>
     	</xf:trigger>
     </body>
 </html>
