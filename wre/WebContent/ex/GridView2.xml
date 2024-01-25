@@ -109,7 +109,7 @@ scwin.trigger1_onclick = function(e) {
     			<w2:row style="" id="row8">
     				<w2:column width="179" inputType="calendar" style="height:30px;" id="col1" value="" displayMode="label"></w2:column>
     				<w2:column width="214" inputType="spinner" style="height:30px;padding: 10px;" id="col2" value="" displayMode="label"
-    					viewType="icon">
+    					viewType="icon" max="3">
     				</w2:column>
     				<w2:column width="168" inputType="text" style="height:30px;" id="col3" value="" displayMode="label"></w2:column>
     			</w2:row>
@@ -131,7 +131,7 @@ scwin.trigger1_onclick = function(e) {
     				<w2:column width="200" inputType="text" style="" id="col1" value="" displayMode="label" excelFormat="#,###.00"
     					displayFormat="#,###.00">
     				</w2:column>
-    				<w2:column width="200" inputType="text" style="" id="col2" value="" displayMode="label" excelFormat="#,### KRW"
+    				<w2:column width="200" inputType="spinner" style="" id="col2" value="" displayMode="label" excelFormat="#,### KRW"
     					displayFormat="#,### KRW">
     				</w2:column>
     				<w2:column width="200" inputType="text" style="" id="col3" value="" displayMode="label"></w2:column>
