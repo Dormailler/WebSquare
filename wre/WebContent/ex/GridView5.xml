@@ -8,10 +8,11 @@
         <w2:MSA/>
         <xf:model>
             <w2:dataCollection baseNode="map">
-            	<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true">
+            	<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true" ev:onbeforecelldatachange="scwin.dataList1_onbeforecelldatachange">
             		<w2:columnInfo>
             			<w2:column id="col1" name="name1" dataType="text"></w2:column>
             			<w2:column id="col2" name="name2" dataType="text"></w2:column>
+            			<w2:column id="Check" name="name3" dataType="text" ignoreStatus="true"></w2:column>
             		</w2:columnInfo>
             		<w2:data use="true">
             			<w2:row>
@@ -49,12 +50,39 @@
 scwin.onpageload = function() {
 	
 };
+
+scwin.gridView1_oncontextopen = function(rowIndex,colIndex,focusedCell,info) {
+    alert(rowIndex);
+    //alert(JSON.stringify(focusedCell,info))
+};
+
+scwin.trigger1_onclick = function(e) {
+    chkArr = gv1.getCheckedIndex("Check");
+    //dataList1.deleteRow(chkArr);
+    var obj = dataList1.removeRow(chkArr);
+    alert(obj);
+};
+
+scwin.trigger2_onclick = function(e) {
+    dataList1.setData([]);
+};
+
+scwin.trigger3_onclick = function(e) {
+    alert(JSON.stringify(dataList1.getAllData()));
+};
+
+scwin.dataList1_onbeforecelldatachange = function(info) {
+    if(info.newValue==""){
+        return false;
+    }
+};
 ]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
-    	<w2:gridView checkAllType="false" defaultCellHeight="20" id=""
-    		style="position:absolute; top:74px; left:96px; width:229px; height:130px; " dataList="data:dataList1" contextMenu="true"
-    		contextMenuAltClick="true">
+    	<w2:gridView checkAllType="false" defaultCellHeight="20" id="gv1"
+    		style="position:absolute;top:73px;left:56px;width:297px;height:130px;" dataList="data:dataList1" contextMenu="true"
+    		contextMenuAltClick="true" useHeaderContextMenu="true" ev:oncontextopen="scwin.gridView1_oncontextopen" rowStatusVisible="true"
+    		rowNumVisible="true" hammerEnabled="true" hammerPressTime="1000" checkEditOnPaste="true">
     		<w2:caption style="" id="caption3" value="this is a grid caption."></w2:caption>
     		<w2:header style="" id="header3">
     			<w2:row style="" id="row5">
@@ -65,8 +93,8 @@ scwin.onpageload = function() {
     		</w2:header>
     		<w2:gBody style="" id="gBody3">
     			<w2:row style="" id="row6">
-    				<w2:column width="70" inputType="checkbox" style="" id="column20" value="" displayMode="label" trueValue="Y"
-    					falseValue="N" valueType="other">
+    				<w2:column width="70" inputType="checkbox" style="" id="Check" value="" displayMode="label" trueValue="Y" falseValue="N"
+    					valueType="other">
     				</w2:column>
     				<w2:column width="70" inputType="text" style="" id="col1" value="" displayMode="label"></w2:column>
     				<w2:column width="70" inputType="text" style="" id="col2" value="" displayMode="label"></w2:column>
@@ -134,5 +162,16 @@ scwin.onpageload = function() {
     			</w2:row>
     		</w2:gBody>
     	</w2:gridView>
+    	<xf:trigger type="button" id="trigger1" style="position:absolute; top:216px; left:58px; width:153px; height:27px; "
+    		ev:onclick="scwin.trigger1_onclick">
+    		<xf:label><![CDATA[deleteRow]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger type="button" id="trigger2" style="position:absolute; top:217px; left:222px; width:126px; height:25px; "
+    		ev:onclick="scwin.trigger2_onclick">
+    		<xf:label><![CDATA[initialize]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger type="button" id="trigger3" style="position:absolute; top:217px; left:364px; width:97px; height:23px; " ev:onclick="scwin.trigger3_onclick">
+    		<xf:label><![CDATA[view]]></xf:label>
+    	</xf:trigger>
     </body>
 </html>
