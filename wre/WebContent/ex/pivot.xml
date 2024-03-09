@@ -69,13 +69,25 @@ scwin.trigger1_onclick = function(e) {
     options.bodyFormat = "#,###,0#";
     options.bodyTextAlign = "right";
     options.autoSizeColumn = "header";
+    options.sumColor = "red";
+    options.sumFontSize = "15";
+    options.sumFormat = "#,###";
 
     p1.pivotExcelDownload(options);
+};
+
+scwin.trigger2_onclick = function(e) {
+    var options = {};
+    options.startRowIndex = 1;
+    options.startColumnIndex = 1;
+    options.append = 1; // 원래 데이터에 추가
+    p1.pivotExcelUpload(options);
 };
 ]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
-    	<w2:pivot style="width: 500px;height: 300px;" dataList="data:dataList1" vals="col2" rows="col1" cols="col3" id="p1" headerYMerge="true" noColumnMove="true">
+    	<w2:pivot style="width: 500px;height: 300px;" dataList="data:dataList1" vals="col2" rows="col1" cols="col3" id="p1"
+    		headerYMerge="true" noColumnMove="true" allTotalName="합계" grandTotalDisplayType="both" showGrandTotal="true" grandTotalName="총합계">
     		<w2:fieldInfo>
     			<w2:field name="name1" id="col1"></w2:field>
     			<w2:field name="name2" id="col2"></w2:field>
@@ -84,6 +96,9 @@ scwin.trigger1_onclick = function(e) {
     	</w2:pivot>
     	<xf:trigger type="button" id="trigger1" style="width:275px;height:23px;" ev:onclick="scwin.trigger1_onclick">
     		<xf:label><![CDATA[pivotExcelDownload]]></xf:label>
+    	</xf:trigger>
+    	<xf:trigger type="button" id="trigger2" style="position:absolute;top:302px;left:297px;width:174px;height:23px;" ev:onclick="scwin.trigger2_onclick">
+    		<xf:label><![CDATA[pivotExcelUpload]]></xf:label>
     	</xf:trigger>
     </body>
 </html>
