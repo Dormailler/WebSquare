@@ -21,11 +21,15 @@ scwin.select11_onviewchange = function(info) {
     mapchart1.dataMapPath = "/Data/" + info.newValue;
     mapchart1.changeMapPath(mapchart1.dataMapPath);
 };
-]]></script>
+
+scwin.ma = function(name,code){
+    return "<br>완료 0," + "<br>진행중 0," + "<br>일정 0";
+}]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
     	<xf:select1 id="select11" chooseOption="true" style="width: 148px;height: 21px;" submenuSize="auto" allOption="" disabled="false"
-    		direction="auto" appearance="minimal" disabledClass="w2selectbox_disabled" ref="" chooseOptionLabel="연도 선택" ev:onviewchange="scwin.select11_onviewchange">
+    		direction="auto" appearance="minimal" disabledClass="w2selectbox_disabled" ref="" chooseOptionLabel="연도 선택"
+    		ev:onviewchange="scwin.select11_onviewchange">
     		<xf:choices>
     			<xf:item>
     				<xf:label><![CDATA[2009]]></xf:label>
@@ -49,6 +53,6 @@ scwin.select11_onviewchange = function(info) {
     			</xf:item>
     		</xf:choices>
     	</xf:select1>
-    	<w2:mapchart style="height: 500px;" id="mapchart1"></w2:mapchart>
+    	<w2:mapchart style="height: 500px;" id="mapchart1" useMarker="true" contextFormatter="scwin.ma"></w2:mapchart>
     </body>
 </html>
